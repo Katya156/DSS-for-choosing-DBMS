@@ -7,7 +7,7 @@ from pages.FillCriteriaOut import FillCriteriaOut
 from pages.FillCriteriaIn import FillCriteriaIn
 from pages.ShowResult import ShowResult
 from pages.ChooseCriteria import ChooseCriteria
-
+from info.paths import resource_path
 
 class tkinterApp():
     """
@@ -18,7 +18,7 @@ class tkinterApp():
     root.geometry('1050x700+100+50')
     root.resizable(False, True)
     root.config(bg=MAINCOLOR)
-    photo = tk.PhotoImage(file ="info/icon.png")
+    photo = tk.PhotoImage(file =resource_path("info/icon.png"))
     root.iconphoto(False, photo)
 
     def __init__(self):
