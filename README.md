@@ -5,6 +5,7 @@ This is a program which ranks DBMS according to your preferences - selected mult
 <h2>Guide</h2>
 <h3>For developers</h3>
 If you are a developer, you can execute program by downloading code in this repository. Steps:
+
 1. Clone this repository into your computer or download zip-archive
 2. Open the project in PyCharm or another development environment
 
