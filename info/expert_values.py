@@ -1,31 +1,31 @@
 import pandas as pd
+import psycopg2
+from dotenv import load_dotenv
+import os
+
+# Загружаем данные из .env файла
+load_dotenv()
+
+# Подключаемся к базе
+connection = psycopg2.connect(
+    host=os.getenv("DB_HOST"),
+    port=os.getenv("DB_PORT"),
+    dbname=os.getenv("DB_NAME"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASS")
+)
+
+cursor = connection.cursor()
 
 alternatives = ['Oracle Database 19c', 'PostgreSQL 13', 'MySQL 9.1 IR', 'SQL Server 2022']
 
-criteria = [
-    'К1.1. Используемая модель данных',
-    'К1.2. Триггеры и хранимые процедуры',
-    'К1.3. Предусмотренные типы данных',
-    'К2.1. Масштабируемость',
-    'К2.2. Распределенность',
-    'К3.1. Контроль использования памяти компьютера',
-    'К3.2. Автонастройка',
-    'К4.1. Наличие средств разработки приложений',
-    'К4.2. Наличие средств проектирования',
-    'К4.3. Наличие многоязыковой поддержки',
-    'К4.4. Поддерживаемые языки программирования',
-    'К5.1. Минимальный рейтинг транзакций',
-    'К6.1. Восстановление после сбоев',
-    'К6.2. Резервное копирование',
-    'К6.3. Откат изменений',
-    'К6.4. Многоуровневая система защиты',
-    'К7.1. Поддерживаемые аппаратные платформы',
-    'К7.2. Минимальная тактовая частота процессора',
-    'К7.3. Максимальный размер адресуемой памяти',
-    'К7.4. Поддерживаемые операционные системы',
-    'К8.1. Максимальная стоимость лицензии',
-    'К8.2. Рейтинг СУБД'
-]
+criteria = []
+cursor.execute('''select distinct id, criteria_name from criteria order by id''')
+rows = cursor.fetchall()
+for i in rows:
+    name = i[1]
+    if name.split()[0].count('.') > 1:
+        criteria.append(name)
 
 data = [
     # Oracle Database 19c

@@ -148,16 +148,16 @@ class ShowResult(tk.Frame):
 
             tk.Button(self, text='Завершить', font=MIDFONT, bg=BUTTONCOLOR, fg=FONTCOLOR,
                       activeforeground=BUTTONCOLOR, command=end_program
-                      ).grid(row=start + 3, column=0, sticky='n', columnspan=4)
+                      ).grid(row=13, column=0, sticky='n', columnspan=4)
         else:
             tk.Label(self, text='Подходящих СУБД не найдено', font=LARGEFONT, fg=FONTCOLOR,
                      bg=MAINCOLOR
-                     ).grid(row=1, column=0, sticky='n', columnspan=3)
+                     ).grid(row=7, column=0, sticky='n', columnspan=3)
 
             tk.Button(self, text='Завершить', font=MIDFONT, bg=BUTTONCOLOR, fg=FONTCOLOR,
                       activeforeground=BUTTONCOLOR, command=self.controller.root.destroy
-                      ).grid(row=2, column=0, sticky='n', columnspan=3)
+                      ).grid(row=13, column=0, sticky='n', columnspan=3)
         for i in range(4):
             self.grid_columnconfigure(i, minsize=1050/4)
-        for i in range(start+4):
-            self.grid_rowconfigure(i, minsize=700 / (start+4))
+        for i in range(15):
+            self.grid_rowconfigure(i, minsize=700 / 15)

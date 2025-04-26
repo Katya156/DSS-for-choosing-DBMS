@@ -24,31 +24,47 @@ def fill_criteria(self, button2, cnt, s, text_in):
         result = re.match("^[13579/]*$", newval) is not None
         return result
     def check_entries(entries):
+        # вставляем обратные значения
+        for i in range(len(entries)):
+            for j in range(len(entries[i])):
+                if i > j:
+                    value = entries[i][j].get()
+                    if '/' in value or value == '1':
+                        x = value[-1]
+                    else:
+                        x = f'1/{value}'
+                    entries[j][i].config(state='normal')
+                    entries[j][i].delete(0, 'end')
+                    entries[j][i].insert(0, x)
+                    entries[j][i].config(state='disabled')
+
+            # После заполнения проверяем, все ли ячейки заполнены
         if all([i.get() for i in list(itertools.chain.from_iterable(entries))]):
-            flg = 1
-            # проверяем, правильно ли по диагонали все заполнено
-            for i in range(len(entries)):
-                for j in range(len(entries[i])):
-                    if entries[i][j].get() != '1':
-                        if ('/' not in entries[i][j].get() and '/' not in entries[j][i].get()) \
-                                and (entries[i][j].get() != 1) \
-                                and (entries[j][i].get() != 1):
-                            flg = 0
-                            break
-                        elif ('/' in entries[i][j].get() and '/' in entries[j][i].get()):
-                            flg = 0
-                            break
-                        elif entries[i][j].get().replace('1/', '') != entries[j][i].get().replace('1/', '') \
-                                and (('/' in entries[i][j].get() and '/' not in entries[j][i].get())
-                                     or ('/' not in entries[i][j].get() and '/' in entries[j][i].get())):
-                            flg = 0
-                            break
-            if flg == 1:
-                button2.config(state='normal')  # Активируем кнопку
-            else:
-                button2.config(state='disabled')
+            if all([i.get() for i in list(itertools.chain.from_iterable(entries))]):
+                flg = 1
+                # проверяем, правильно ли по диагонали все заполнено
+                for i in range(len(entries)):
+                    for j in range(len(entries[i])):
+                        if entries[i][j].get() != '1':
+                            if ('/' not in entries[i][j].get() and '/' not in entries[j][i].get()) \
+                                    and (entries[i][j].get() != 1) \
+                                    and (entries[j][i].get() != 1):
+                                flg = 0
+                                break
+                            elif ('/' in entries[i][j].get() and '/' in entries[j][i].get()):
+                                flg = 0
+                                break
+                            elif entries[i][j].get().replace('1/', '') != entries[j][i].get().replace('1/', '') \
+                                    and (('/' in entries[i][j].get() and '/' not in entries[j][i].get())
+                                         or ('/' not in entries[i][j].get() and '/' in entries[j][i].get())):
+                                flg = 0
+                                break
+                if flg == 1:
+                    button2.config(state='normal')
+                else:
+                    button2.config(state='disabled')
         else:
-            button2.config(state='disabled')  # Деактивируем кнопку
+            button2.config(state='disabled')
 
     tk.Label(self, text=f'Введите степени важности критериев {text_in} уровня', font=MIDFONT, fg=FONTCOLOR,
              bg=MAINCOLOR
@@ -84,8 +100,9 @@ def fill_criteria(self, button2, cnt, s, text_in):
             entry = tk.Entry(self, width=5, validate='key', validatecommand=check)
             entry.grid(row=i, column=j)
             # вставка 1 по главной диагонали
-            if j ==  i - 2:
-                entry.insert(0, '1')
+            if j >=  i - 2:
+                if j == i - 2:
+                    entry.insert(0, '1')
                 entry.config(state='disabled')
             entry.bind("<KeyRelease>", lambda e: check_entries(entries))
             row_entries.append(entry)

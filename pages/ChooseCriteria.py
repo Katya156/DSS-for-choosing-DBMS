@@ -60,7 +60,7 @@ class ChooseCriteria(tk.Frame):
             return res
 
         tk.Label(self, text='Выберите критерии (минимум 2)', font=LARGEFONT, bg=MAINCOLOR, fg=FONTCOLOR
-                 ).grid(row=1, column=1, stick='n', columnspan = 2)
+                 ).grid(row=1, column=0, stick='n', columnspan = 2)
 
 
         criteria_lst = []
@@ -72,7 +72,7 @@ class ChooseCriteria(tk.Frame):
 
         enter_criteria_lst = ['К5.1.', 'К8.2.', "К7.3.", "К8.1.", 'К7.2.']
         criteria_dict = {key: tk.IntVar() for key in criteria_lst}
-        f, col, row = 0, 1, 2
+        f, col, row = 0, 0, 2
         for i in criteria_dict:
             key = i
             if f == len(criteria_dict) // 2:
@@ -81,12 +81,12 @@ class ChooseCriteria(tk.Frame):
             if i[3] != ' ':
                 ch = tk.Checkbutton(self, text=i, variable=criteria_dict[i],
                                     bg=MAINCOLOR, command = lambda key=key: check_entries(criteria_dict, key))
-                ch.grid(row=row, column=col, stick="w")
+                ch.grid(row=row, column=col, stick="w", padx = (80,0))
                 # ch.bind("<ButtonRelease>", lambda e, key=key: check_entries(criteria_dict.values(), key))
 
             else:
                 tk.Label(self, text=i, font = SMALLFONT, bg=MAINCOLOR, fg=FONTCOLOR,
-                 ).grid(row=row, column=col, stick = 'w')
+                 ).grid(row=row, column=col, stick = 'w', padx = (80,0))
             row += 1
             f += 1
         if self.method == 'Метод анализa иерархий':
@@ -95,7 +95,7 @@ class ChooseCriteria(tk.Frame):
                                 command=lambda: self.controller.show_frame(FillCriteriaOut, task_id=self.task_id,
                                                                            method=self.method,
                                                                            criteria=check_res(criteria_dict)))
-            button1.grid(row=18, column=1, stick='n', columnspan=2)
+            button1.grid(row=18, column=0, stick='n', columnspan=2)
 
         elif self.method == 'Метод TOPSIS':
             button1 = tk.Button(self, text='Подтвердить', font=LARGEFONT, bg=BUTTONCOLOR, fg=FONTCOLOR,
@@ -103,9 +103,9 @@ class ChooseCriteria(tk.Frame):
                                 command=lambda: self.controller.show_frame(ShowResult, task_id=self.task_id,
                                                                            method=self.method,
                                                                            criteria=check_res(criteria_dict)))
-            button1.grid(row=18, column=1, stick='n', columnspan=2)
+            button1.grid(row=18, column=0, stick='n', columnspan=2)
 
-        for i in range(4):
-            self.grid_columnconfigure(i, minsize=262.5)
+        for i in range(2):
+            self.grid_columnconfigure(i, minsize=1050/2)
         for i in range(20):
             self.grid_rowconfigure(i, minsize=35)

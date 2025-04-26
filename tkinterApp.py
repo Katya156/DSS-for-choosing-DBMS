@@ -7,7 +7,17 @@ from pages.FillCriteriaOut import FillCriteriaOut
 from pages.FillCriteriaIn import FillCriteriaIn
 from pages.ShowResult import ShowResult
 from pages.ChooseCriteria import ChooseCriteria
-from info.paths import resource_path
+import os
+import sys
+
+def resource_path(relative_path):
+    try:
+        # Для bundled .exe
+        base_path = sys._MEIPASS
+    except Exception:
+        # Для обычного запуска
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 class tkinterApp():
     """

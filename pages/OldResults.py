@@ -27,85 +27,82 @@ class OldResults(tk.Frame):
         tk.Label(self, text='Выберите задачу', font=LARGEFONT, fg=FONTCOLOR, bg=MAINCOLOR, width=30, height=3
                  ).grid(row=0, column=1, columnspan=2)
 
-        cursor.execute("""select distinct task_name
-                                      from results r
-                                        join tasks t
-                                            on r.tasks_id = t.id""")
+        # --- СОЗДАЕМ отдельный фрейм для вывода результата ---
+        self.result_frame = tk.Frame(self, bg=MAINCOLOR)
+        self.result_frame.grid(row=3, column=0, columnspan=4)
+
+        # --- Загружаем данные для комбобокса ---
+        cursor.execute("""SELECT DISTINCT task_name
+                          FROM results r
+                          JOIN tasks t ON r.tasks_id = t.id""")
         row = cursor.fetchall()
-        names = []
-        for i in row:
-            name = i[0]
-            names.append(name)
+        names = [i[0] for i in row]
 
         if names:
-
-            combobox = ttk.Combobox(self, values=names, state="readonly", width = 50)
+            combobox = ttk.Combobox(self, values=names, state="readonly", width=50)
             combobox.grid(row=1, column=1, columnspan=2, sticky='n')
             combobox.current(0)
 
             def get_result():
+                # ОЧИЩАЕМ фрейм от предыдущего вывода
+                for widget in self.result_frame.winfo_children():
+                    widget.destroy()
 
-                tk.Label(self, text='Результат ранжирования', font=LARGEFONT, fg=FONTCOLOR, bg=MAINCOLOR, width=30, height=3
-                         ).grid(row=3, column=2, columnspan=2)
+                # Дальше твой вывод результатов
+                tk.Label(self.result_frame, text='Результат ранжирования', font=LARGEFONT,
+                         fg=FONTCOLOR, bg=MAINCOLOR, width=30, height=3
+                         ).grid(row=0, column=2, columnspan=2)
 
-                tk.Label(self, text='Информация о задаче', font=LARGEFONT, fg=FONTCOLOR, bg=MAINCOLOR, width=30,
-                         height=3
-                         ).grid(row=3, column=0, columnspan=2)
+                tk.Label(self.result_frame, text='Информация о задаче', font=LARGEFONT,
+                         fg=FONTCOLOR, bg=MAINCOLOR, width=30, height=3
+                         ).grid(row=0, column=0, columnspan=2)
 
-                cursor.execute(f"""select dv.version_name, r.dbms_weight
-                                    from results r
-                                        join tasks t
-                                            on r.tasks_id = t.id
-                                            and task_name = '{combobox.get()}'
-                                        join dbms_versions dv
-                                            on r.dbms_version_id = dv.id
-                                    order by dbms_weight desc""")
+                # Твои запросы и отображение информации...
+                cursor.execute(f"""SELECT dv.version_name, r.dbms_weight
+                                   FROM results r
+                                   JOIN tasks t ON r.tasks_id = t.id AND task_name = '{combobox.get()}'
+                                   JOIN dbms_versions dv ON r.dbms_version_id = dv.id
+                                   ORDER BY dbms_weight DESC""")
                 row = cursor.fetchall()
-                res = {}
-                for i in row:
-                    name = i[0]
-                    weight = i[1]
-                    res[name] = float(weight)
+                res = {i[0]: float(i[1]) for i in row}
 
-                cursor.execute(f"""select criteria_name, selected_method, task_value
-                                    from tasks t
-                                        join task_info ti
-                                           on ti.tasks_id = t.id
-                                           and task_name = '{combobox.get()}'
-                                        join criteria c
-                                            on c.id = ti.criteria_id""")
+                cursor.execute(f"""SELECT criteria_name, selected_method, task_value
+                                   FROM tasks t
+                                   JOIN task_info ti ON ti.tasks_id = t.id AND task_name = '{combobox.get()}'
+                                   JOIN criteria c ON c.id = ti.criteria_id""")
                 rows = cursor.fetchall()
+
                 grouped_data = defaultdict(list)
-                for row in rows:
-                    criterion, method, value = row
+                for criterion, method, value in rows:
                     grouped_data[criterion].append(value)
 
-                # Вывод результата
-                tk.Label(self, text=f"Метод ранжирования - {method}", font=SMALLFONT, fg=FONTCOLOR,
-                         bg=MAINCOLOR
-                         ).grid(row=4, column=0, sticky='n', columnspan=2)
-                start = 5
+                tk.Label(self.result_frame, text=f"Метод ранжирования - {method}", font=SMALLFONT,
+                         fg=FONTCOLOR, bg=MAINCOLOR
+                         ).grid(row=1, column=0, sticky='n', columnspan=2)
+
+                start = 2
                 for criterion, values in grouped_data.items():
-                    tk.Label(self, text=f"{criterion} — {', '.join(values)}", font=SMALLFONT, fg=FONTCOLOR,
-                             bg=MAINCOLOR
+                    tk.Label(self.result_frame, text=f"{criterion} — {', '.join(values)}", font=SMALLFONT,
+                             fg=FONTCOLOR, bg=MAINCOLOR
                              ).grid(row=start, column=0, sticky='n', columnspan=2)
-                    # print(f"{criterion} — {', '.join(values)}")
                     start += 1
 
-                start = 4
+                start = 1
                 cnt = 1
                 for i in res:
-                    tk.Label(self, text=f'{cnt}. {i}, вес - {res[i]}', font=SMALLFONT, fg=FONTCOLOR,
-                             bg=MAINCOLOR
+                    tk.Label(self.result_frame, text=f'{cnt}. {i}, вес - {res[i]}', font=SMALLFONT,
+                             fg=FONTCOLOR, bg=MAINCOLOR
                              ).grid(row=start, column=2, sticky='n', columnspan=2)
                     start += 1
                     cnt += 1
 
-            tk.Button(self, text='Подтвердить', font=LARGEFONT, bg=BUTTONCOLOR, fg=FONTCOLOR, activeforeground=BUTTONCOLOR,
-                      command=get_result).grid(row=2, column=1, columnspan=2, sticky= 'n')
+            # При нажатии кнопки
+            tk.Button(self, text='Подтвердить', font=LARGEFONT, bg=BUTTONCOLOR, fg=FONTCOLOR,
+                      activeforeground=BUTTONCOLOR, command=get_result).grid(row=2, column=1, columnspan=2, sticky='n')
+
         else:
-            tk.Label(self, text='Старых задач не найдено', font=LARGEFONT, fg=FONTCOLOR, bg=MAINCOLOR, width=30, height=3
-                     ).grid(row=2, column=1, columnspan=2)
+            tk.Label(self, text='Старых задач не найдено', font=LARGEFONT, fg=FONTCOLOR, bg=MAINCOLOR,
+                     width=30, height=3).grid(row=2, column=1, columnspan=2)
 
         for i in range(4):
             self.grid_columnconfigure(i, minsize=1050/4)
