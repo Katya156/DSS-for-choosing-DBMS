@@ -45,6 +45,8 @@ def restore_data():
                 host=os.getenv("DB_HOST"),
                 port=os.getenv("DB_PORT"),
                 dbname=os.getenv("DB_NAME"),
+                # 'postgres',
+                # os.getenv("DB_NAME"),
                 user=os.getenv("DB_USER"),
                 password=os.getenv("DB_PASS")
             )
@@ -64,9 +66,10 @@ def restore_data():
         #             FROM pg_stat_activity
         #             WHERE datname = 'apitone' AND pid <> pg_backend_pid();
         #         """)
-
+        #
         # # Удаляем базу, если она существует
         # cur.execute("DROP DATABASE IF EXISTS apitone;")
+
         if not exists:
             print("Создаём базу apitone и восстанавливаем данные...")
 
