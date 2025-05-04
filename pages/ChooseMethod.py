@@ -15,9 +15,9 @@ connection = psycopg2.connect(
     port=os.getenv("DB_PORT"),
     dbname=os.getenv("DB_NAME"),
     user=os.getenv("DB_USER"),
-    password=os.getenv("DB_PASS")
+    password=""
 )
-
+# connection.set_client_encoding('WIN1252')
 cursor = connection.cursor()
 
 class ChooseMethod(tk.Frame):

@@ -1,0 +1,454 @@
+2025-05-02 14:04:25.448 -05 [10268] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-02 14:04:25.460 -05 [10268] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-02 14:04:25.461 -05 [10268] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-02 14:04:25.669 -05 [29480] LOG:  el sistema de bases de datos fue apagado en 2025-05-02 11:55:19 -05
+2025-05-02 14:04:25.737 -05 [10268] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-02 14:05:00.579 -05 [10268] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-02 14:05:00.583 -05 [10268] LOG:  abortando transacciones activas
+2025-05-02 14:05:00.595 -05 [10268] LOG:  proceso ayudante �logical replication launcher� (PID 15528) termin'o con c'odigo de salida 1
+2025-05-02 14:05:00.602 -05 [29360] LOG:  apagando
+2025-05-02 14:05:00.691 -05 [10268] LOG:  el sistema de bases de datos est'a apagado
+2025-05-02 14:05:05.438 -05 [33596] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-02 14:05:05.448 -05 [33596] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-02 14:05:05.448 -05 [33596] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-02 14:05:05.545 -05 [21528] LOG:  el sistema de bases de datos fue apagado en 2025-05-02 14:05:00 -05
+2025-05-02 14:05:05.607 -05 [33596] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-02 14:05:37.774 -05 [33596] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-02 14:05:37.779 -05 [33596] LOG:  abortando transacciones activas
+2025-05-02 14:05:37.788 -05 [33596] LOG:  proceso ayudante �logical replication launcher� (PID 20044) termin'o con c'odigo de salida 1
+2025-05-02 14:05:37.793 -05 [23616] LOG:  apagando
+2025-05-02 14:05:37.894 -05 [33596] LOG:  el sistema de bases de datos est'a apagado
+2025-05-02 14:07:05.281 -05 [22736] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-02 14:07:05.293 -05 [22736] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-02 14:07:05.294 -05 [22736] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-02 14:07:05.403 -05 [4744] LOG:  el sistema de bases de datos fue apagado en 2025-05-02 14:05:37 -05
+2025-05-02 14:07:05.465 -05 [22736] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-02 14:07:13.780 -05 [22736] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-02 14:07:13.787 -05 [22736] LOG:  abortando transacciones activas
+2025-05-02 14:07:13.807 -05 [22736] LOG:  proceso ayudante �logical replication launcher� (PID 28676) termin'o con c'odigo de salida 1
+2025-05-02 14:07:13.813 -05 [21132] LOG:  apagando
+2025-05-02 14:07:13.885 -05 [22736] LOG:  el sistema de bases de datos est'a apagado
+2025-05-03 16:02:49.193 -05 [36708] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-03 16:02:49.203 -05 [36708] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-03 16:02:49.204 -05 [36708] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-03 16:02:49.412 -05 [16264] LOG:  el sistema de bases de datos fue apagado en 2025-05-02 14:07:13 -05
+2025-05-03 16:02:49.479 -05 [36708] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-03 16:03:32.789 -05 [36708] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-03 16:03:32.793 -05 [36708] LOG:  abortando transacciones activas
+2025-05-03 16:03:32.804 -05 [36708] LOG:  proceso ayudante �logical replication launcher� (PID 35872) termin'o con c'odigo de salida 1
+2025-05-03 16:03:32.810 -05 [860] LOG:  apagando
+2025-05-03 16:03:32.890 -05 [36708] LOG:  el sistema de bases de datos est'a apagado
+2025-05-03 16:03:58.279 -05 [19476] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-03 16:03:58.296 -05 [19476] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-03 16:03:58.297 -05 [19476] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-03 16:03:58.444 -05 [20988] LOG:  el sistema de bases de datos fue apagado en 2025-05-03 16:03:32 -05
+2025-05-03 16:03:58.521 -05 [19476] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-03 16:04:33.115 -05 [19476] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-03 16:04:33.119 -05 [19476] LOG:  abortando transacciones activas
+2025-05-03 16:04:33.129 -05 [19476] LOG:  proceso ayudante �logical replication launcher� (PID 40448) termin'o con c'odigo de salida 1
+2025-05-03 16:04:33.136 -05 [38980] LOG:  apagando
+2025-05-03 16:04:33.220 -05 [19476] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 07:51:57.505 -05 [43588] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 07:51:57.515 -05 [43588] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 07:51:57.516 -05 [43588] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 07:51:57.650 -05 [41724] LOG:  el sistema de bases de datos fue apagado en 2025-05-03 16:04:33 -05
+2025-05-04 07:51:57.720 -05 [43588] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 07:52:10.432 -05 [43588] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 07:52:10.444 -05 [43588] LOG:  abortando transacciones activas
+2025-05-04 07:52:10.453 -05 [43588] LOG:  proceso ayudante �logical replication launcher� (PID 37388) termin'o con c'odigo de salida 1
+2025-05-04 07:52:10.460 -05 [30524] LOG:  apagando
+2025-05-04 07:52:10.530 -05 [43588] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 08:30:02.883 -05 [32612] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 08:30:02.891 -05 [32612] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 08:30:02.892 -05 [32612] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 08:30:02.979 -05 [38660] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 07:52:10 -05
+2025-05-04 08:30:03.035 -05 [32612] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 08:30:10.728 -05 [32612] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 08:30:10.742 -05 [32612] LOG:  abortando transacciones activas
+2025-05-04 08:30:10.751 -05 [32612] LOG:  proceso ayudante �logical replication launcher� (PID 34220) termin'o con c'odigo de salida 1
+2025-05-04 08:30:10.757 -05 [28560] LOG:  apagando
+2025-05-04 08:30:10.810 -05 [32612] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 08:34:58.494 -05 [28844] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 08:34:58.503 -05 [28844] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 08:34:58.504 -05 [28844] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 08:34:58.591 -05 [42136] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 08:30:10 -05
+2025-05-04 08:34:58.648 -05 [28844] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 08:35:22.379 -05 [28844] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 08:35:22.393 -05 [28844] LOG:  abortando transacciones activas
+2025-05-04 08:35:22.403 -05 [28844] LOG:  proceso ayudante �logical replication launcher� (PID 35716) termin'o con c'odigo de salida 1
+2025-05-04 08:35:22.410 -05 [17044] LOG:  apagando
+2025-05-04 08:35:22.469 -05 [28844] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 08:36:13.421 -05 [25296] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 08:36:13.431 -05 [25296] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 08:36:13.431 -05 [25296] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 08:36:13.630 -05 [6896] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 08:35:22 -05
+2025-05-04 08:36:13.688 -05 [25296] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 08:36:33.094 -05 [25296] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 08:36:33.098 -05 [25296] LOG:  abortando transacciones activas
+2025-05-04 08:36:33.107 -05 [25296] LOG:  proceso ayudante �logical replication launcher� (PID 28028) termin'o con c'odigo de salida 1
+2025-05-04 08:36:33.115 -05 [35888] LOG:  apagando
+2025-05-04 08:36:33.177 -05 [25296] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 08:50:45.828 -05 [33544] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 08:50:45.836 -05 [33544] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 08:50:45.837 -05 [33544] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 08:50:45.927 -05 [43592] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 08:36:33 -05
+2025-05-04 08:50:45.985 -05 [33544] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 08:51:20.060 -05 [33544] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 08:51:20.064 -05 [33544] LOG:  abortando transacciones activas
+2025-05-04 08:51:20.073 -05 [33544] LOG:  proceso ayudante �logical replication launcher� (PID 27088) termin'o con c'odigo de salida 1
+2025-05-04 08:51:20.079 -05 [33676] LOG:  apagando
+2025-05-04 08:51:20.137 -05 [33544] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 08:52:23.544 -05 [29996] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 08:52:23.553 -05 [29996] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 08:52:23.553 -05 [29996] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 08:52:23.642 -05 [42692] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 08:51:20 -05
+2025-05-04 08:52:23.698 -05 [29996] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 08:52:27.208 -05 [42216] ERROR:  la relación «criteria_allowed_values» ya existe
+2025-05-04 08:52:27.208 -05 [42216] SENTENCIA:  CREATE TABLE public.criteria_allowed_values (
+	    id numeric(5,0) NOT NULL,
+	    criteria_id numeric(5,0) NOT NULL,
+	    allowed_value character varying(100) NOT NULL,
+	    criteria_adding_date date NOT NULL,
+	    criteria_deletion_date date,
+	    comment character varying(120)
+	);
+2025-05-04 08:52:27.210 -05 [42216] ERROR:  la relación «criteria_types» ya existe
+2025-05-04 08:52:27.210 -05 [42216] SENTENCIA:  CREATE TABLE public.criteria_types (
+	    criteria_type_name character varying(40) NOT NULL,
+	    comment character varying(120)
+	);
+2025-05-04 08:52:27.211 -05 [42216] ERROR:  la relación «criteria_values» ya existe
+2025-05-04 08:52:27.211 -05 [42216] SENTENCIA:  CREATE TABLE public.criteria_values (
+	    id numeric(5,0) NOT NULL,
+	    criteria_allowed_values_id numeric(5,0),
+	    dbms_id numeric(5,0),
+	    criteria_value character varying(100) NOT NULL,
+	    filling_date date NOT NULL,
+	    deletion_date date,
+	    comment character varying(120)
+	);
+2025-05-04 08:52:27.212 -05 [42216] ERROR:  la relación «data_types» ya existe
+2025-05-04 08:52:27.212 -05 [42216] SENTENCIA:  CREATE TABLE public.data_types (
+	    data_type_name character varying(20) NOT NULL,
+	    type_code character(1),
+	    comment character varying(120),
+	    CONSTRAINT data_types_type_code_check CHECK ((type_code = ANY (ARRAY['N'::bpchar, 'C'::bpchar, 'D'::bpchar])))
+	);
+2025-05-04 08:52:27.213 -05 [42216] ERROR:  la relación «dbms» ya existe
+2025-05-04 08:52:27.213 -05 [42216] SENTENCIA:  CREATE TABLE public.dbms (
+	    id numeric(5,0) NOT NULL,
+	    dbms_name character varying(120) NOT NULL,
+	    dbms_firm_name character varying(120) NOT NULL,
+	    dbms_release_date date NOT NULL,
+	    dmbs_support_stop_date date,
+	    comment character varying(120)
+	);
+2025-05-04 08:52:27.214 -05 [42216] ERROR:  la relación «dbms_versions» ya existe
+2025-05-04 08:52:27.214 -05 [42216] SENTENCIA:  CREATE TABLE public.dbms_versions (
+	    id numeric(5,0) NOT NULL,
+	    version_name character varying(120) NOT NULL,
+	    dbms_id numeric(5,0),
+	    version_release_date date NOT NULL,
+	    version_support_stop_date date,
+	    comment character varying(120)
+	);
+2025-05-04 08:52:27.215 -05 [42216] ERROR:  la relación «multiple_choice» ya existe
+2025-05-04 08:52:27.215 -05 [42216] SENTENCIA:  CREATE TABLE public.multiple_choice (
+	    value_id numeric(5,0),
+	    task_value character varying(40)
+	);
+2025-05-04 08:52:27.217 -05 [42216] ERROR:  la relación «results» ya existe
+2025-05-04 08:52:27.217 -05 [42216] SENTENCIA:  CREATE TABLE public.results (
+	    result_id numeric(5,0) NOT NULL,
+	    tasks_id numeric(5,0),
+	    dbms_version_id numeric(5,0),
+	    calculation_date date NOT NULL,
+	    dbms_rank numeric(5,0) NOT NULL,
+	    dbms_weight numeric(4,3),
+	    comment character varying(120)
+	);
+2025-05-04 08:52:27.218 -05 [42216] ERROR:  la relación «results_seq» ya existe
+2025-05-04 08:52:27.218 -05 [42216] SENTENCIA:  CREATE SEQUENCE public.results_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2025-05-04 08:52:27.221 -05 [42216] ERROR:  la relación «task_info» ya existe
+2025-05-04 08:52:27.221 -05 [42216] SENTENCIA:  CREATE TABLE public.task_info (
+	    task_info_id numeric(5,0) NOT NULL,
+	    criteria_id numeric(5,0),
+	    tasks_id numeric(5,0),
+	    task_value character varying(100),
+	    filling_date date NOT NULL,
+	    deletion_date date,
+	    comparison character varying(20) DEFAULT '='::character varying,
+	    comment character varying(120)
+	);
+2025-05-04 08:52:27.222 -05 [42216] ERROR:  la relación «task_info_seq» ya existe
+2025-05-04 08:52:27.222 -05 [42216] SENTENCIA:  CREATE SEQUENCE public.task_info_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2025-05-04 08:52:27.225 -05 [42216] ERROR:  la relación «tasks» ya existe
+2025-05-04 08:52:27.225 -05 [42216] SENTENCIA:  CREATE TABLE public.tasks (
+	    id numeric(5,0) NOT NULL,
+	    threshold_task numeric(2,0),
+	    task_name character varying(40),
+	    filling_date date NOT NULL,
+	    deletion_date date,
+	    comment character varying(120),
+	    selected_method character varying(100) NOT NULL
+	);
+2025-05-04 08:52:27.226 -05 [42216] ERROR:  la relación «tasks_seq» ya existe
+2025-05-04 08:52:27.226 -05 [42216] SENTENCIA:  CREATE SEQUENCE public.tasks_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2025-05-04 08:52:27.269 -05 [42216] ERROR:  no existe la relación «criteria_values»
+2025-05-04 08:52:27.269 -05 [42216] SENTENCIA:  TRUNCATE TABLE
+	  criteria_values,
+	  criteria_allowed_values,
+	  criteria,
+	  criteria_types,
+	  data_types,
+	  dbms,
+	  dbms_versions,
+	  results,
+	  task_info,
+	  tasks CASCADE;
+2025-05-04 08:52:27.281 -05 [42216] ERROR:  llave duplicada viola restricción de unicidad «criteria_allowed_values_pkey»
+2025-05-04 08:52:27.281 -05 [42216] DETALLE:  Ya existe la llave (id)=(1).
+2025-05-04 08:52:27.281 -05 [42216] CONTEXTO:  COPY criteria_allowed_values, línea 1
+2025-05-04 08:52:27.281 -05 [42216] SENTENCIA:  COPY public.criteria_allowed_values (id, criteria_id, allowed_value, criteria_adding_date, criteria_deletion_date, comment) FROM stdin;
+2025-05-04 08:52:27.299 -05 [42216] ERROR:  llave duplicada viola restricción de unicidad «criteria_types_pkey»
+2025-05-04 08:52:27.299 -05 [42216] DETALLE:  Ya existe la llave (criteria_type_name)=(список).
+2025-05-04 08:52:27.299 -05 [42216] CONTEXTO:  COPY criteria_types, línea 1
+2025-05-04 08:52:27.299 -05 [42216] SENTENCIA:  COPY public.criteria_types (criteria_type_name, comment) FROM stdin;
+2025-05-04 08:52:27.306 -05 [42216] ERROR:  llave duplicada viola restricción de unicidad «criteria_values_pkey»
+2025-05-04 08:52:27.306 -05 [42216] DETALLE:  Ya existe la llave (id)=(1).
+2025-05-04 08:52:27.306 -05 [42216] CONTEXTO:  COPY criteria_values, línea 1
+2025-05-04 08:52:27.306 -05 [42216] SENTENCIA:  COPY public.criteria_values (id, criteria_allowed_values_id, dbms_id, criteria_value, filling_date, deletion_date, comment) FROM stdin;
+2025-05-04 08:52:27.311 -05 [42216] ERROR:  llave duplicada viola restricción de unicidad «data_types_pkey»
+2025-05-04 08:52:27.311 -05 [42216] DETALLE:  Ya existe la llave (data_type_name)=(numeric).
+2025-05-04 08:52:27.311 -05 [42216] CONTEXTO:  COPY data_types, línea 1
+2025-05-04 08:52:27.311 -05 [42216] SENTENCIA:  COPY public.data_types (data_type_name, type_code, comment) FROM stdin;
+2025-05-04 08:52:27.315 -05 [42216] ERROR:  llave duplicada viola restricción de unicidad «dbms_dbms_name_key»
+2025-05-04 08:52:27.315 -05 [42216] DETALLE:  Ya existe la llave (dbms_name)=(Oracle Database).
+2025-05-04 08:52:27.315 -05 [42216] CONTEXTO:  COPY dbms, línea 1
+2025-05-04 08:52:27.315 -05 [42216] SENTENCIA:  COPY public.dbms (id, dbms_name, dbms_firm_name, dbms_release_date, dmbs_support_stop_date, comment) FROM stdin;
+2025-05-04 08:52:27.319 -05 [42216] ERROR:  llave duplicada viola restricción de unicidad «dbms_versions_pkey»
+2025-05-04 08:52:27.319 -05 [42216] DETALLE:  Ya existe la llave (id)=(1).
+2025-05-04 08:52:27.319 -05 [42216] CONTEXTO:  COPY dbms_versions, línea 1
+2025-05-04 08:52:27.319 -05 [42216] SENTENCIA:  COPY public.dbms_versions (id, version_name, dbms_id, version_release_date, version_support_stop_date, comment) FROM stdin;
+2025-05-04 08:52:27.323 -05 [42216] ERROR:  llave duplicada viola restricción de unicidad «results_pkey»
+2025-05-04 08:52:27.323 -05 [42216] DETALLE:  Ya existe la llave (result_id)=(1).
+2025-05-04 08:52:27.323 -05 [42216] CONTEXTO:  COPY results, línea 1
+2025-05-04 08:52:27.323 -05 [42216] SENTENCIA:  COPY public.results (result_id, tasks_id, dbms_version_id, calculation_date, dbms_rank, dbms_weight, comment) FROM stdin;
+2025-05-04 08:52:27.330 -05 [42216] ERROR:  llave duplicada viola restricción de unicidad «task_info_pkey»
+2025-05-04 08:52:27.330 -05 [42216] DETALLE:  Ya existe la llave (task_info_id)=(1).
+2025-05-04 08:52:27.330 -05 [42216] CONTEXTO:  COPY task_info, línea 1
+2025-05-04 08:52:27.330 -05 [42216] SENTENCIA:  COPY public.task_info (task_info_id, criteria_id, tasks_id, task_value, filling_date, deletion_date, comparison, comment) FROM stdin;
+2025-05-04 08:52:27.334 -05 [42216] ERROR:  llave duplicada viola restricción de unicidad «tasks_pkey»
+2025-05-04 08:52:27.334 -05 [42216] DETALLE:  Ya existe la llave (id)=(1).
+2025-05-04 08:52:27.334 -05 [42216] CONTEXTO:  COPY tasks, línea 1
+2025-05-04 08:52:27.334 -05 [42216] SENTENCIA:  COPY public.tasks (id, threshold_task, task_name, filling_date, deletion_date, comment, selected_method) FROM stdin;
+2025-05-04 08:52:27.341 -05 [42216] ERROR:  no se permiten múltiples llaves primarias para la tabla «criteria_allowed_values»
+2025-05-04 08:52:27.341 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.criteria_allowed_values
+	    ADD CONSTRAINT criteria_allowed_values_pkey PRIMARY KEY (id);
+2025-05-04 08:52:27.360 -05 [42216] ERROR:  no se permiten múltiples llaves primarias para la tabla «criteria_types»
+2025-05-04 08:52:27.360 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.criteria_types
+	    ADD CONSTRAINT criteria_types_pkey PRIMARY KEY (criteria_type_name);
+2025-05-04 08:52:27.361 -05 [42216] ERROR:  no se permiten múltiples llaves primarias para la tabla «criteria_values»
+2025-05-04 08:52:27.361 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.criteria_values
+	    ADD CONSTRAINT criteria_values_pkey PRIMARY KEY (id);
+2025-05-04 08:52:27.361 -05 [42216] ERROR:  no se permiten múltiples llaves primarias para la tabla «data_types»
+2025-05-04 08:52:27.361 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.data_types
+	    ADD CONSTRAINT data_types_pkey PRIMARY KEY (data_type_name);
+2025-05-04 08:52:27.363 -05 [42216] ERROR:  la relación «dbms_dbms_name_key» ya existe
+2025-05-04 08:52:27.363 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.dbms
+	    ADD CONSTRAINT dbms_dbms_name_key UNIQUE (dbms_name);
+2025-05-04 08:52:27.363 -05 [42216] ERROR:  no se permiten múltiples llaves primarias para la tabla «dbms»
+2025-05-04 08:52:27.363 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.dbms
+	    ADD CONSTRAINT dbms_pkey PRIMARY KEY (id);
+2025-05-04 08:52:27.364 -05 [42216] ERROR:  no se permiten múltiples llaves primarias para la tabla «dbms_versions»
+2025-05-04 08:52:27.364 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.dbms_versions
+	    ADD CONSTRAINT dbms_versions_pkey PRIMARY KEY (id);
+2025-05-04 08:52:27.364 -05 [42216] ERROR:  la relación «dbms_versions_version_name_key» ya existe
+2025-05-04 08:52:27.364 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.dbms_versions
+	    ADD CONSTRAINT dbms_versions_version_name_key UNIQUE (version_name);
+2025-05-04 08:52:27.365 -05 [42216] ERROR:  no se permiten múltiples llaves primarias para la tabla «results»
+2025-05-04 08:52:27.365 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.results
+	    ADD CONSTRAINT results_pkey PRIMARY KEY (result_id);
+2025-05-04 08:52:27.365 -05 [42216] ERROR:  no se permiten múltiples llaves primarias para la tabla «task_info»
+2025-05-04 08:52:27.365 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.task_info
+	    ADD CONSTRAINT task_info_pkey PRIMARY KEY (task_info_id);
+2025-05-04 08:52:27.365 -05 [42216] ERROR:  no se permiten múltiples llaves primarias para la tabla «tasks»
+2025-05-04 08:52:27.365 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.tasks
+	    ADD CONSTRAINT tasks_pkey PRIMARY KEY (id);
+2025-05-04 08:52:27.392 -05 [42216] ERROR:  la restricción «criteria_values_criteria_allowed_values_id_fkey» para la relación «criteria_values» ya existe
+2025-05-04 08:52:27.392 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.criteria_values
+	    ADD CONSTRAINT criteria_values_criteria_allowed_values_id_fkey FOREIGN KEY (criteria_allowed_values_id) REFERENCES public.criteria_allowed_values(id);
+2025-05-04 08:52:27.392 -05 [42216] ERROR:  la restricción «criteria_values_dbms_id_fkey» para la relación «criteria_values» ya existe
+2025-05-04 08:52:27.392 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.criteria_values
+	    ADD CONSTRAINT criteria_values_dbms_id_fkey FOREIGN KEY (dbms_id) REFERENCES public.dbms_versions(id);
+2025-05-04 08:52:27.393 -05 [42216] ERROR:  la restricción «dbms_versions_dbms_id_fkey» para la relación «dbms_versions» ya existe
+2025-05-04 08:52:27.393 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.dbms_versions
+	    ADD CONSTRAINT dbms_versions_dbms_id_fkey FOREIGN KEY (dbms_id) REFERENCES public.dbms(id);
+2025-05-04 08:52:27.393 -05 [42216] ERROR:  la restricción «results_dbms_version_id_fkey» para la relación «results» ya existe
+2025-05-04 08:52:27.393 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.results
+	    ADD CONSTRAINT results_dbms_version_id_fkey FOREIGN KEY (dbms_version_id) REFERENCES public.dbms_versions(id);
+2025-05-04 08:52:27.393 -05 [42216] ERROR:  la restricción «results_tasks_id_fkey» para la relación «results» ya existe
+2025-05-04 08:52:27.393 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.results
+	    ADD CONSTRAINT results_tasks_id_fkey FOREIGN KEY (tasks_id) REFERENCES public.tasks(id);
+2025-05-04 08:52:27.398 -05 [42216] ERROR:  la restricción «task_info_tasks_id_fkey» para la relación «task_info» ya existe
+2025-05-04 08:52:27.398 -05 [42216] SENTENCIA:  ALTER TABLE ONLY public.task_info
+	    ADD CONSTRAINT task_info_tasks_id_fkey FOREIGN KEY (tasks_id) REFERENCES public.tasks(id);
+2025-05-04 08:52:35.678 -05 [35516] ERROR:  llave duplicada viola restricción de unicidad «tasks_pkey»
+2025-05-04 08:52:35.678 -05 [35516] DETALLE:  Ya existe la llave (id)=(98).
+2025-05-04 08:52:35.678 -05 [35516] SENTENCIA:  insert into tasks(task_name, threshold_task, selected_method, filling_date) values(
+	                                          'vbbg', 1, 'Метод анализa иерархий', current_date)
+2025-05-04 08:52:36.998 -05 [35516] ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+2025-05-04 08:52:36.998 -05 [35516] SENTENCIA:  insert into tasks(task_name, threshold_task, selected_method, filling_date) values(
+	                                          'vbbg', 1, 'Метод анализa иерархий', current_date)
+2025-05-04 08:53:03.516 -05 [29996] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 08:53:03.521 -05 [29996] LOG:  abortando transacciones activas
+2025-05-04 08:53:03.529 -05 [29996] LOG:  proceso ayudante �logical replication launcher� (PID 18520) termin'o con c'odigo de salida 1
+2025-05-04 08:53:03.536 -05 [41012] LOG:  apagando
+2025-05-04 08:53:03.740 -05 [29996] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 08:53:44.931 -05 [42484] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 08:53:44.939 -05 [42484] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 08:53:44.940 -05 [42484] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 08:53:45.032 -05 [42640] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 08:53:03 -05
+2025-05-04 08:53:45.087 -05 [42484] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 08:53:48.340 -05 [43936] ERROR:  no se puede eliminar la base de datos activa
+2025-05-04 08:53:48.340 -05 [43936] SENTENCIA:  DROP DATABASE IF EXISTS apitone;
+2025-05-04 08:53:55.050 -05 [30176] ERROR:  llave duplicada viola restricción de unicidad «tasks_pkey»
+2025-05-04 08:53:55.050 -05 [30176] DETALLE:  Ya existe la llave (id)=(99).
+2025-05-04 08:53:55.050 -05 [30176] SENTENCIA:  insert into tasks(task_name, threshold_task, selected_method, filling_date) values(
+	                                          'cvbgff', 1, 'Метод анализa иерархий', current_date)
+2025-05-04 08:54:07.468 -05 [42484] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 08:54:07.472 -05 [42484] LOG:  abortando transacciones activas
+2025-05-04 08:54:07.481 -05 [42484] LOG:  proceso ayudante �logical replication launcher� (PID 25288) termin'o con c'odigo de salida 1
+2025-05-04 08:54:07.488 -05 [41216] LOG:  apagando
+2025-05-04 08:54:07.553 -05 [42484] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 08:54:16.379 -05 [2220] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 08:54:16.388 -05 [2220] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 08:54:16.388 -05 [2220] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 08:54:16.475 -05 [16996] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 08:54:07 -05
+2025-05-04 08:54:16.530 -05 [2220] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 08:54:19.723 -05 [41352] ERROR:  no se puede eliminar la base de datos activa
+2025-05-04 08:54:19.723 -05 [41352] SENTENCIA:  DROP DATABASE IF EXISTS apitone;
+2025-05-04 08:54:25.344 -05 [34496] ERROR:  llave duplicada viola restricción de unicidad «tasks_pkey»
+2025-05-04 08:54:25.344 -05 [34496] DETALLE:  Ya existe la llave (id)=(100).
+2025-05-04 08:54:25.344 -05 [34496] SENTENCIA:  insert into tasks(task_name, threshold_task, selected_method, filling_date) values(
+	                                          'vbgfg', 1, 'Метод анализa иерархий', current_date)
+2025-05-04 08:54:26.512 -05 [2220] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 08:54:26.516 -05 [2220] LOG:  abortando transacciones activas
+2025-05-04 08:54:26.524 -05 [2220] LOG:  proceso ayudante �logical replication launcher� (PID 42820) termin'o con c'odigo de salida 1
+2025-05-04 08:54:26.531 -05 [34276] LOG:  apagando
+2025-05-04 08:54:26.587 -05 [2220] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 08:55:59.445 -05 [39900] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 08:55:59.457 -05 [39900] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 08:55:59.457 -05 [39900] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 08:55:59.581 -05 [26064] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 08:54:26 -05
+2025-05-04 08:55:59.636 -05 [39900] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 08:56:08.016 -05 [43888] ERROR:  llave duplicada viola restricción de unicidad «tasks_pkey»
+2025-05-04 08:56:08.016 -05 [43888] DETALLE:  Ya existe la llave (id)=(101).
+2025-05-04 08:56:08.016 -05 [43888] SENTENCIA:  insert into tasks(task_name, threshold_task, selected_method, filling_date) values(
+	                                          'vgffgvf', 1, 'Метод анализa иерархий', current_date)
+2025-05-04 08:56:38.507 -05 [39900] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 08:56:38.521 -05 [39900] LOG:  abortando transacciones activas
+2025-05-04 08:56:38.531 -05 [39900] LOG:  proceso ayudante �logical replication launcher� (PID 40880) termin'o con c'odigo de salida 1
+2025-05-04 08:56:38.539 -05 [42552] LOG:  apagando
+2025-05-04 08:56:38.600 -05 [39900] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 08:57:53.139 -05 [33316] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 08:57:53.148 -05 [33316] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 08:57:53.149 -05 [33316] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 08:57:53.240 -05 [41360] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 08:56:38 -05
+2025-05-04 08:57:53.299 -05 [33316] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 08:57:58.208 -05 [32928] ERROR:  no existe la tabla «criteria»
+2025-05-04 08:57:58.208 -05 [32928] SENTENCIA:  DROP TABLE public.criteria CASCADE;
+2025-05-04 08:57:58.298 -05 [32928] ERROR:  no existe la función public.check_allowed_value_update()
+2025-05-04 08:57:58.298 -05 [32928] SENTENCIA:  DROP FUNCTION public.check_allowed_value_update() CASCADE;
+2025-05-04 08:57:58.306 -05 [32928] ERROR:  no existe la función public.set_default_value()
+2025-05-04 08:57:58.306 -05 [32928] SENTENCIA:  DROP FUNCTION public.set_default_value() CASCADE;
+2025-05-04 08:57:58.314 -05 [32928] ERROR:  no existe la relación «criteria_values»
+2025-05-04 08:57:58.314 -05 [32928] SENTENCIA:  TRUNCATE TABLE
+	  criteria_values,
+	  criteria_allowed_values,
+	  criteria,
+	  criteria_types,
+	  data_types,
+	  dbms,
+	  dbms_versions,
+	  results,
+	  task_info,
+	  tasks CASCADE;
+2025-05-04 08:58:17.311 -05 [33316] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 08:58:17.315 -05 [33316] LOG:  abortando transacciones activas
+2025-05-04 08:58:17.325 -05 [33316] LOG:  proceso ayudante �logical replication launcher� (PID 42676) termin'o con c'odigo de salida 1
+2025-05-04 08:58:17.333 -05 [36176] LOG:  apagando
+2025-05-04 08:58:17.515 -05 [33316] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 09:03:43.841 -05 [12312] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 09:03:43.849 -05 [12312] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 09:03:43.850 -05 [12312] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 09:03:43.942 -05 [43744] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 08:58:17 -05
+2025-05-04 09:03:44.001 -05 [12312] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 09:03:48.768 -05 [17112] ERROR:  no existe la tabla «criteria»
+2025-05-04 09:03:48.768 -05 [17112] SENTENCIA:  DROP TABLE public.criteria CASCADE;
+2025-05-04 09:03:48.842 -05 [17112] ERROR:  no existe la función public.check_allowed_value_update()
+2025-05-04 09:03:48.842 -05 [17112] SENTENCIA:  DROP FUNCTION public.check_allowed_value_update() CASCADE;
+2025-05-04 09:03:48.849 -05 [17112] ERROR:  no existe la función public.set_default_value()
+2025-05-04 09:03:48.849 -05 [17112] SENTENCIA:  DROP FUNCTION public.set_default_value() CASCADE;
+2025-05-04 09:03:48.856 -05 [17112] ERROR:  no existe la relación «criteria_values»
+2025-05-04 09:03:48.856 -05 [17112] SENTENCIA:  TRUNCATE TABLE
+	  criteria_values,
+	  criteria_allowed_values,
+	  criteria,
+	  criteria_types,
+	  data_types,
+	  dbms,
+	  dbms_versions,
+	  results,
+	  task_info,
+	  tasks CASCADE;
+2025-05-04 09:04:13.145 -05 [12312] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 09:04:13.150 -05 [12312] LOG:  abortando transacciones activas
+2025-05-04 09:04:13.157 -05 [12312] LOG:  proceso ayudante �logical replication launcher� (PID 27520) termin'o con c'odigo de salida 1
+2025-05-04 09:04:13.163 -05 [43964] LOG:  apagando
+2025-05-04 09:04:13.364 -05 [12312] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 09:16:22.836 -05 [17072] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 09:16:22.846 -05 [17072] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 09:16:22.847 -05 [17072] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 09:16:22.943 -05 [23216] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 09:04:13 -05
+2025-05-04 09:16:22.997 -05 [17072] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 09:17:15.486 -05 [17072] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 09:17:15.491 -05 [17072] LOG:  abortando transacciones activas
+2025-05-04 09:17:15.501 -05 [17072] LOG:  proceso ayudante �logical replication launcher� (PID 18536) termin'o con c'odigo de salida 1
+2025-05-04 09:17:15.507 -05 [21696] LOG:  apagando
+2025-05-04 09:17:15.601 -05 [17072] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 09:17:17.488 -05 [39508] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 09:17:17.497 -05 [39508] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 09:17:17.497 -05 [39508] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 09:17:17.584 -05 [42988] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 09:17:15 -05
+2025-05-04 09:17:17.639 -05 [39508] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 09:17:45.897 -05 [39508] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 09:17:45.901 -05 [39508] LOG:  abortando transacciones activas
+2025-05-04 09:17:45.910 -05 [39508] LOG:  proceso ayudante �logical replication launcher� (PID 23500) termin'o con c'odigo de salida 1
+2025-05-04 09:17:45.918 -05 [37860] LOG:  apagando
+2025-05-04 09:17:45.984 -05 [39508] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 09:18:44.231 -05 [38396] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 09:18:44.240 -05 [38396] LOG:  escuchando en la direcci'on IPv6 �::1�, port 5433
+2025-05-04 09:18:44.240 -05 [38396] LOG:  escuchando en la direcci'on IPv4 �127.0.0.1�, port 5433
+2025-05-04 09:18:44.327 -05 [34928] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 09:17:45 -05
+2025-05-04 09:18:44.384 -05 [38396] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 09:19:17.943 -05 [38396] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 09:19:17.948 -05 [38396] LOG:  abortando transacciones activas
+2025-05-04 09:19:17.958 -05 [38396] LOG:  proceso ayudante �logical replication launcher� (PID 42016) termin'o con c'odigo de salida 1
+2025-05-04 09:19:17.964 -05 [2788] LOG:  apagando
+2025-05-04 09:19:18.060 -05 [38396] LOG:  el sistema de bases de datos est'a apagado
