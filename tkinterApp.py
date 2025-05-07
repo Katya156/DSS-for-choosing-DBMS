@@ -1,5 +1,5 @@
 import tkinter as tk
-from info.vars import *
+from data.vars import *
 from pages.StartPage import StartPage
 from pages.OldResults import OldResults
 from pages.ChooseMethod import ChooseMethod
@@ -28,7 +28,7 @@ class tkinterApp():
     root.geometry('1050x700+100+50')
     root.resizable(False, True)
     root.config(bg=MAINCOLOR)
-    photo = tk.PhotoImage(file =resource_path("info/icon.png"))
+    photo = tk.PhotoImage(file =resource_path("data/icon.png"))
     root.iconphoto(False, photo)
 
     def __init__(self):

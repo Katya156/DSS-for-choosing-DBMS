@@ -452,3 +452,611 @@
 2025-05-04 09:19:17.958 -05 [38396] LOG:  proceso ayudante «logical replication launcher» (PID 42016) termin'o con c'odigo de salida 1
 2025-05-04 09:19:17.964 -05 [2788] LOG:  apagando
 2025-05-04 09:19:18.060 -05 [38396] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 10:18:18.564 -05 [41600] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 10:18:18.573 -05 [41600] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-04 10:18:18.574 -05 [41600] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-04 10:18:18.674 -05 [17508] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 09:19:18 -05
+2025-05-04 10:18:18.740 -05 [41600] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 10:18:23.534 -05 [43060] ERROR:  no existe la tabla Â«criteriaÂ»
+2025-05-04 10:18:23.534 -05 [43060] SENTENCIA:  DROP TABLE public.criteria CASCADE;
+2025-05-04 10:18:23.604 -05 [43060] ERROR:  no existe la funciÃ³n public.check_allowed_value_update()
+2025-05-04 10:18:23.604 -05 [43060] SENTENCIA:  DROP FUNCTION public.check_allowed_value_update() CASCADE;
+2025-05-04 10:18:23.614 -05 [43060] ERROR:  no existe la funciÃ³n public.set_default_value()
+2025-05-04 10:18:23.614 -05 [43060] SENTENCIA:  DROP FUNCTION public.set_default_value() CASCADE;
+2025-05-04 10:18:23.621 -05 [43060] ERROR:  no existe la relaciÃ³n Â«criteria_valuesÂ»
+2025-05-04 10:18:23.621 -05 [43060] SENTENCIA:  TRUNCATE TABLE
+	  criteria_values,
+	  criteria_allowed_values,
+	  criteria,
+	  criteria_types,
+	  data_types,
+	  dbms,
+	  dbms_versions,
+	  results,
+	  task_info,
+	  tasks CASCADE;
+2025-05-04 10:18:23.772 -05 [43060] ERROR:  inserciÃ³n o actualizaciÃ³n en la tabla Â«resultsÂ» viola la llave forÃ¡nea Â«results_tasks_id_fkeyÂ»
+2025-05-04 10:18:23.772 -05 [43060] DETALLE:  La llave (tasks_id)=(1) no estÃ¡ presente en la tabla Â«tasksÂ».
+2025-05-04 10:18:23.772 -05 [43060] SENTENCIA:  ALTER TABLE ONLY public.results
+	    ADD CONSTRAINT results_tasks_id_fkey FOREIGN KEY (tasks_id) REFERENCES public.tasks(id);
+2025-05-04 10:18:53.686 -05 [41600] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 10:18:53.690 -05 [41600] LOG:  abortando transacciones activas
+2025-05-04 10:18:53.700 -05 [41600] LOG:  proceso ayudante «logical replication launcher» (PID 17432) termin'o con c'odigo de salida 1
+2025-05-04 10:18:53.706 -05 [16508] LOG:  apagando
+2025-05-04 10:18:54.058 -05 [41600] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 10:20:01.608 -05 [17064] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 10:20:01.617 -05 [17064] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-04 10:20:01.617 -05 [17064] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-04 10:20:01.706 -05 [42092] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 10:18:53 -05
+2025-05-04 10:20:01.765 -05 [17064] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 10:20:13.689 -05 [17064] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 10:20:13.693 -05 [17064] LOG:  abortando transacciones activas
+2025-05-04 10:20:13.703 -05 [17064] LOG:  proceso ayudante «logical replication launcher» (PID 31592) termin'o con c'odigo de salida 1
+2025-05-04 10:20:13.709 -05 [37864] LOG:  apagando
+2025-05-04 10:20:13.761 -05 [17064] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 10:20:16.330 -05 [29088] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 10:20:16.338 -05 [29088] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-04 10:20:16.338 -05 [29088] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-04 10:20:16.433 -05 [38156] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 10:20:13 -05
+2025-05-04 10:20:16.488 -05 [29088] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 10:20:40.041 -05 [29088] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 10:20:40.045 -05 [29088] LOG:  abortando transacciones activas
+2025-05-04 10:20:40.055 -05 [29088] LOG:  proceso ayudante «logical replication launcher» (PID 39996) termin'o con c'odigo de salida 1
+2025-05-04 10:20:40.063 -05 [41108] LOG:  apagando
+2025-05-04 10:20:40.145 -05 [29088] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 10:39:48.195 -05 [40576] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 10:39:48.206 -05 [40576] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-04 10:39:48.206 -05 [40576] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-04 10:39:48.324 -05 [35004] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 10:20:40 -05
+2025-05-04 10:39:48.392 -05 [40576] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 10:40:27.471 -05 [40576] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 10:40:27.476 -05 [40576] LOG:  abortando transacciones activas
+2025-05-04 10:40:27.487 -05 [40576] LOG:  proceso ayudante «logical replication launcher» (PID 44000) termin'o con c'odigo de salida 1
+2025-05-04 10:40:27.494 -05 [38640] LOG:  apagando
+2025-05-04 10:40:27.600 -05 [40576] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 10:58:29.488 -05 [40068] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 10:58:29.497 -05 [40068] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-04 10:58:29.498 -05 [40068] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-04 10:58:29.607 -05 [40372] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 10:40:27 -05
+2025-05-04 10:58:29.674 -05 [40068] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 10:58:35.216 -05 [40272] ERROR:  no existe la tabla Â«criteriaÂ»
+2025-05-04 10:58:35.216 -05 [40272] SENTENCIA:  DROP TABLE public.criteria CASCADE;
+2025-05-04 10:58:35.304 -05 [40272] ERROR:  no existe la funciÃ³n public.check_allowed_value_update()
+2025-05-04 10:58:35.304 -05 [40272] SENTENCIA:  DROP FUNCTION public.check_allowed_value_update() CASCADE;
+2025-05-04 10:58:35.317 -05 [40272] ERROR:  no existe la funciÃ³n public.set_default_value()
+2025-05-04 10:58:35.317 -05 [40272] SENTENCIA:  DROP FUNCTION public.set_default_value() CASCADE;
+2025-05-04 10:58:35.326 -05 [40272] ERROR:  no existe la relaciÃ³n Â«criteria_valuesÂ»
+2025-05-04 10:58:35.326 -05 [40272] SENTENCIA:  TRUNCATE TABLE
+	  criteria_values,
+	  criteria_allowed_values,
+	  criteria,
+	  criteria_types,
+	  data_types,
+	  dbms,
+	  dbms_versions,
+	  results,
+	  task_info,
+	  tasks CASCADE;
+2025-05-04 10:58:35.498 -05 [40272] ERROR:  inserciÃ³n o actualizaciÃ³n en la tabla Â«resultsÂ» viola la llave forÃ¡nea Â«results_tasks_id_fkeyÂ»
+2025-05-04 10:58:35.498 -05 [40272] DETALLE:  La llave (tasks_id)=(1) no estÃ¡ presente en la tabla Â«tasksÂ».
+2025-05-04 10:58:35.498 -05 [40272] SENTENCIA:  ALTER TABLE ONLY public.results
+	    ADD CONSTRAINT results_tasks_id_fkey FOREIGN KEY (tasks_id) REFERENCES public.tasks(id);
+2025-05-04 10:58:50.943 -05 [40068] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 10:58:50.951 -05 [40068] LOG:  abortando transacciones activas
+2025-05-04 10:58:50.965 -05 [40068] LOG:  proceso ayudante «logical replication launcher» (PID 8324) termin'o con c'odigo de salida 1
+2025-05-04 10:58:50.972 -05 [24484] LOG:  apagando
+2025-05-04 10:58:51.189 -05 [40068] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 11:00:13.387 -05 [22452] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 11:00:13.397 -05 [22452] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-04 11:00:13.397 -05 [22452] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-04 11:00:13.499 -05 [28644] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 10:58:51 -05
+2025-05-04 11:00:13.564 -05 [22452] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 11:00:18.609 -05 [38960] ERROR:  no existe la tabla Â«criteriaÂ»
+2025-05-04 11:00:18.609 -05 [38960] SENTENCIA:  DROP TABLE public.criteria CASCADE;
+2025-05-04 11:00:18.692 -05 [38960] ERROR:  no existe la funciÃ³n public.check_allowed_value_update()
+2025-05-04 11:00:18.692 -05 [38960] SENTENCIA:  DROP FUNCTION public.check_allowed_value_update() CASCADE;
+2025-05-04 11:00:18.699 -05 [38960] ERROR:  no existe la funciÃ³n public.set_default_value()
+2025-05-04 11:00:18.699 -05 [38960] SENTENCIA:  DROP FUNCTION public.set_default_value() CASCADE;
+2025-05-04 11:00:18.706 -05 [38960] ERROR:  no existe la relaciÃ³n Â«criteria_valuesÂ»
+2025-05-04 11:00:18.706 -05 [38960] SENTENCIA:  TRUNCATE TABLE
+	  criteria_values,
+	  criteria_allowed_values,
+	  criteria,
+	  criteria_types,
+	  data_types,
+	  dbms,
+	  dbms_versions,
+	  results,
+	  task_info,
+	  tasks CASCADE;
+2025-05-04 11:00:18.884 -05 [38960] ERROR:  inserciÃ³n o actualizaciÃ³n en la tabla Â«resultsÂ» viola la llave forÃ¡nea Â«results_tasks_id_fkeyÂ»
+2025-05-04 11:00:18.884 -05 [38960] DETALLE:  La llave (tasks_id)=(1) no estÃ¡ presente en la tabla Â«tasksÂ».
+2025-05-04 11:00:18.884 -05 [38960] SENTENCIA:  ALTER TABLE ONLY public.results
+	    ADD CONSTRAINT results_tasks_id_fkey FOREIGN KEY (tasks_id) REFERENCES public.tasks(id);
+2025-05-04 11:00:22.393 -05 [41000] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2025-05-04 11:00:22.393 -05 [43040] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2025-05-04 11:00:22.393 -05 [23188] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2025-05-04 11:00:22.393 -05 [37588] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2025-05-04 11:00:22.393 -05 [36064] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2025-05-04 11:00:22.394 -05 [37588] LOG:  se encontrÃ³ fin de archivo inesperado en una conexiÃ³n con una transacciÃ³n abierta
+2025-05-04 11:00:22.448 -05 [22452] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 11:00:22.453 -05 [22452] LOG:  abortando transacciones activas
+2025-05-04 11:00:22.463 -05 [22452] LOG:  proceso ayudante «logical replication launcher» (PID 39472) termin'o con c'odigo de salida 1
+2025-05-04 11:00:22.470 -05 [43784] LOG:  apagando
+2025-05-04 11:00:22.765 -05 [22452] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 11:00:49.230 -05 [40880] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 11:00:49.240 -05 [40880] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-04 11:00:49.240 -05 [40880] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-04 11:00:49.346 -05 [24964] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 11:00:22 -05
+2025-05-04 11:00:49.413 -05 [40880] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 11:00:54.445 -05 [42256] ERROR:  no existe la tabla Â«criteriaÂ»
+2025-05-04 11:00:54.445 -05 [42256] SENTENCIA:  DROP TABLE public.criteria CASCADE;
+2025-05-04 11:00:54.526 -05 [42256] ERROR:  no existe la funciÃ³n public.check_allowed_value_update()
+2025-05-04 11:00:54.526 -05 [42256] SENTENCIA:  DROP FUNCTION public.check_allowed_value_update() CASCADE;
+2025-05-04 11:00:54.535 -05 [42256] ERROR:  no existe la funciÃ³n public.set_default_value()
+2025-05-04 11:00:54.535 -05 [42256] SENTENCIA:  DROP FUNCTION public.set_default_value() CASCADE;
+2025-05-04 11:00:54.542 -05 [42256] ERROR:  no existe la relaciÃ³n Â«criteria_valuesÂ»
+2025-05-04 11:00:54.542 -05 [42256] SENTENCIA:  TRUNCATE TABLE
+	  criteria_values,
+	  criteria_allowed_values,
+	  criteria,
+	  criteria_types,
+	  data_types,
+	  dbms,
+	  dbms_versions,
+	  results,
+	  task_info,
+	  tasks CASCADE;
+2025-05-04 11:00:54.716 -05 [42256] ERROR:  inserciÃ³n o actualizaciÃ³n en la tabla Â«resultsÂ» viola la llave forÃ¡nea Â«results_tasks_id_fkeyÂ»
+2025-05-04 11:00:54.716 -05 [42256] DETALLE:  La llave (tasks_id)=(1) no estÃ¡ presente en la tabla Â«tasksÂ».
+2025-05-04 11:00:54.716 -05 [42256] SENTENCIA:  ALTER TABLE ONLY public.results
+	    ADD CONSTRAINT results_tasks_id_fkey FOREIGN KEY (tasks_id) REFERENCES public.tasks(id);
+2025-05-04 11:01:00.591 -05 [40880] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 11:01:00.599 -05 [40880] LOG:  abortando transacciones activas
+2025-05-04 11:01:00.609 -05 [40880] LOG:  proceso ayudante «logical replication launcher» (PID 42788) termin'o con c'odigo de salida 1
+2025-05-04 11:01:00.615 -05 [42768] LOG:  apagando
+2025-05-04 11:01:00.921 -05 [40880] LOG:  el sistema de bases de datos est'a apagado
+2025-05-04 11:01:40.751 -05 [16968] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-04 11:01:40.763 -05 [16968] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-04 11:01:40.764 -05 [16968] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-04 11:01:40.879 -05 [39236] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 11:01:00 -05
+2025-05-04 11:01:40.960 -05 [16968] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-04 11:01:50.390 -05 [16968] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-04 11:01:50.399 -05 [16968] LOG:  abortando transacciones activas
+2025-05-04 11:01:50.419 -05 [16968] LOG:  proceso ayudante «logical replication launcher» (PID 13900) termin'o con c'odigo de salida 1
+2025-05-04 11:01:50.433 -05 [43084] LOG:  apagando
+2025-05-04 11:01:50.511 -05 [16968] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 15:07:20.553 -05 [24900] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 15:07:20.564 -05 [24900] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 15:07:20.565 -05 [24900] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 15:07:20.686 -05 [12708] LOG:  el sistema de bases de datos fue apagado en 2025-05-04 11:01:50 -05
+2025-05-05 15:07:20.758 -05 [24900] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 15:07:37.740 -05 [24900] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 15:07:37.746 -05 [24900] LOG:  abortando transacciones activas
+2025-05-05 15:07:37.755 -05 [24900] LOG:  proceso ayudante «logical replication launcher» (PID 5608) termin'o con c'odigo de salida 1
+2025-05-05 15:07:37.768 -05 [30712] LOG:  apagando
+2025-05-05 15:07:37.858 -05 [24900] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 15:07:41.451 -05 [27416] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 15:07:41.461 -05 [27416] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 15:07:41.461 -05 [27416] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 15:07:41.570 -05 [24724] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 15:07:37 -05
+2025-05-05 15:07:41.637 -05 [27416] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 15:08:13.168 -05 [27416] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 15:08:13.176 -05 [27416] LOG:  abortando transacciones activas
+2025-05-05 15:08:13.189 -05 [27416] LOG:  proceso ayudante «logical replication launcher» (PID 29636) termin'o con c'odigo de salida 1
+2025-05-05 15:08:13.208 -05 [27108] LOG:  apagando
+2025-05-05 15:08:13.373 -05 [27416] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 15:08:15.229 -05 [1784] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 15:08:15.237 -05 [1784] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 15:08:15.238 -05 [1784] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 15:08:15.338 -05 [3620] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 15:08:13 -05
+2025-05-05 15:08:15.402 -05 [1784] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 15:08:55.559 -05 [1784] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 15:08:55.573 -05 [1784] LOG:  abortando transacciones activas
+2025-05-05 15:08:55.582 -05 [1784] LOG:  proceso ayudante «logical replication launcher» (PID 10280) termin'o con c'odigo de salida 1
+2025-05-05 15:08:55.591 -05 [29920] LOG:  apagando
+2025-05-05 15:08:55.692 -05 [1784] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 15:19:33.201 -05 [22052] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 15:19:33.211 -05 [22052] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 15:19:33.211 -05 [22052] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 15:19:33.316 -05 [9480] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 15:08:55 -05
+2025-05-05 15:19:33.380 -05 [22052] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 15:19:51.711 -05 [22052] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 15:19:51.726 -05 [22052] LOG:  abortando transacciones activas
+2025-05-05 15:19:51.737 -05 [22052] LOG:  proceso ayudante «logical replication launcher» (PID 8652) termin'o con c'odigo de salida 1
+2025-05-05 15:19:51.749 -05 [26648] LOG:  apagando
+2025-05-05 15:19:51.835 -05 [22052] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 15:22:03.949 -05 [8212] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 15:22:03.960 -05 [8212] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 15:22:03.961 -05 [8212] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 15:22:04.072 -05 [22000] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 15:19:51 -05
+2025-05-05 15:22:04.148 -05 [8212] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 15:22:22.867 -05 [8212] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 15:22:22.883 -05 [8212] LOG:  abortando transacciones activas
+2025-05-05 15:22:22.897 -05 [8212] LOG:  proceso ayudante «logical replication launcher» (PID 27128) termin'o con c'odigo de salida 1
+2025-05-05 15:22:22.911 -05 [8316] LOG:  apagando
+2025-05-05 15:22:22.987 -05 [8212] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 15:23:49.212 -05 [6376] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 15:23:49.221 -05 [6376] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 15:23:49.221 -05 [6376] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 15:23:49.422 -05 [27492] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 15:22:22 -05
+2025-05-05 15:23:49.494 -05 [6376] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 15:24:04.482 -05 [6376] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 15:24:04.496 -05 [6376] LOG:  abortando transacciones activas
+2025-05-05 15:24:04.508 -05 [6376] LOG:  proceso ayudante «logical replication launcher» (PID 30160) termin'o con c'odigo de salida 1
+2025-05-05 15:24:04.521 -05 [29436] LOG:  apagando
+2025-05-05 15:24:04.601 -05 [6376] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 15:24:50.167 -05 [30340] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 15:24:50.176 -05 [30340] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 15:24:50.176 -05 [30340] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 15:24:50.275 -05 [352] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 15:24:04 -05
+2025-05-05 15:24:50.339 -05 [30340] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 15:28:19.311 -05 [30340] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 15:28:19.316 -05 [30340] LOG:  abortando transacciones activas
+2025-05-05 15:28:19.324 -05 [30340] LOG:  proceso ayudante «logical replication launcher» (PID 27020) termin'o con c'odigo de salida 1
+2025-05-05 15:28:19.332 -05 [6220] LOG:  apagando
+2025-05-05 15:28:19.390 -05 [30340] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 15:28:24.732 -05 [28416] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 15:28:24.744 -05 [28416] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 15:28:24.744 -05 [28416] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 15:28:24.958 -05 [24272] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 15:28:19 -05
+2025-05-05 15:28:25.049 -05 [28416] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 15:33:07.572 -05 [28416] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 15:33:07.577 -05 [28416] LOG:  abortando transacciones activas
+2025-05-05 15:33:07.588 -05 [28416] LOG:  proceso ayudante «logical replication launcher» (PID 6444) termin'o con c'odigo de salida 1
+2025-05-05 15:33:07.597 -05 [28156] LOG:  apagando
+2025-05-05 15:33:07.665 -05 [28416] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 15:35:48.885 -05 [14496] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 15:35:48.895 -05 [14496] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 15:35:48.896 -05 [14496] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 15:35:49.002 -05 [29928] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 15:33:07 -05
+2025-05-05 15:35:49.069 -05 [14496] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 15:36:20.598 -05 [14496] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 15:36:20.611 -05 [14496] LOG:  abortando transacciones activas
+2025-05-05 15:36:20.618 -05 [14496] LOG:  proceso ayudante «logical replication launcher» (PID 2480) termin'o con c'odigo de salida 1
+2025-05-05 15:36:20.626 -05 [21236] LOG:  apagando
+2025-05-05 15:36:20.683 -05 [14496] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 15:40:15.174 -05 [28712] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 15:40:15.186 -05 [28712] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 15:40:15.187 -05 [28712] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 15:40:15.396 -05 [31112] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 15:36:20 -05
+2025-05-05 15:40:15.479 -05 [28712] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 15:40:38.281 -05 [28712] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 15:40:38.296 -05 [28712] LOG:  abortando transacciones activas
+2025-05-05 15:40:38.308 -05 [28712] LOG:  proceso ayudante «logical replication launcher» (PID 24712) termin'o con c'odigo de salida 1
+2025-05-05 15:40:38.317 -05 [21160] LOG:  apagando
+2025-05-05 15:40:38.385 -05 [28712] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 15:42:34.058 -05 [31684] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 15:42:34.067 -05 [31684] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 15:42:34.068 -05 [31684] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 15:42:34.165 -05 [6176] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 15:40:38 -05
+2025-05-05 15:42:34.234 -05 [31684] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 15:42:54.187 -05 [31684] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 15:42:54.202 -05 [31684] LOG:  abortando transacciones activas
+2025-05-05 15:42:54.214 -05 [31684] LOG:  proceso ayudante «logical replication launcher» (PID 27240) termin'o con c'odigo de salida 1
+2025-05-05 15:42:54.226 -05 [30448] LOG:  apagando
+2025-05-05 15:42:54.307 -05 [31684] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 15:49:09.228 -05 [27596] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 15:49:09.239 -05 [27596] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 15:49:09.240 -05 [27596] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 15:49:09.358 -05 [4860] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 15:42:54 -05
+2025-05-05 15:49:09.425 -05 [27596] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 15:50:05.703 -05 [27596] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 15:50:05.708 -05 [27596] LOG:  abortando transacciones activas
+2025-05-05 15:50:05.720 -05 [27596] LOG:  proceso ayudante «logical replication launcher» (PID 27068) termin'o con c'odigo de salida 1
+2025-05-05 15:50:05.730 -05 [22172] LOG:  apagando
+2025-05-05 15:50:05.792 -05 [27596] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 15:58:16.584 -05 [30936] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 15:58:16.593 -05 [30936] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 15:58:16.593 -05 [30936] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 15:58:16.782 -05 [31132] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 15:50:05 -05
+2025-05-05 15:58:16.839 -05 [30936] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 15:58:54.494 -05 [30936] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 15:58:54.498 -05 [30936] LOG:  abortando transacciones activas
+2025-05-05 15:58:54.504 -05 [31896] ERROR:  cancelando la sentencia debido a una petici'on del usuario
+2025-05-05 15:58:54.506 -05 [32020] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 15:58:54.507 -05 [25092] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 15:58:54.508 -05 [30696] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 15:58:54.509 -05 [30124] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 15:58:54.509 -05 [31228] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 15:58:54.510 -05 [32628] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 15:58:54.511 -05 [19216] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 15:58:54.513 -05 [30936] LOG:  proceso ayudante «logical replication launcher» (PID 31896) termin'o con c'odigo de salida 1
+2025-05-05 15:58:54.527 -05 [2832] LOG:  apagando
+2025-05-05 15:58:54.578 -05 [30936] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 16:03:43.659 -05 [30936] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 16:03:43.669 -05 [30936] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 16:03:43.669 -05 [30936] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 16:03:43.757 -05 [29780] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 15:58:54 -05
+2025-05-05 16:03:43.817 -05 [30936] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 16:04:17.181 -05 [30936] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 16:04:17.195 -05 [30936] LOG:  abortando transacciones activas
+2025-05-05 16:04:17.203 -05 [30936] LOG:  proceso ayudante «logical replication launcher» (PID 14084) termin'o con c'odigo de salida 1
+2025-05-05 16:04:17.210 -05 [19464] LOG:  apagando
+2025-05-05 16:04:17.262 -05 [30936] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 16:07:59.561 -05 [27932] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 16:07:59.570 -05 [27932] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 16:07:59.571 -05 [27932] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 16:07:59.663 -05 [4284] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 16:04:17 -05
+2025-05-05 16:07:59.718 -05 [27932] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 16:08:54.214 -05 [27932] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 16:08:54.219 -05 [16564] ERROR:  cancelando la sentencia debido a una petici'on del usuario
+2025-05-05 16:08:54.228 -05 [27932] LOG:  abortando transacciones activas
+2025-05-05 16:08:54.233 -05 [27932] LOG:  proceso ayudante «logical replication launcher» (PID 16564) termin'o con c'odigo de salida 1
+2025-05-05 16:08:54.236 -05 [8108] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 16:08:54.237 -05 [29056] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 16:08:54.238 -05 [30868] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 16:08:54.239 -05 [31764] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 16:08:54.240 -05 [29280] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 16:08:54.241 -05 [26112] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 16:08:54.241 -05 [27004] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2025-05-05 16:08:54.255 -05 [31284] LOG:  apagando
+2025-05-05 16:08:54.304 -05 [27932] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 16:11:50.237 -05 [27740] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 16:11:50.246 -05 [27740] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 16:11:50.246 -05 [27740] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 16:11:50.332 -05 [28252] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 16:08:54 -05
+2025-05-05 16:11:50.388 -05 [27740] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 16:12:20.445 -05 [27740] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 16:12:20.449 -05 [27740] LOG:  abortando transacciones activas
+2025-05-05 16:12:20.458 -05 [27740] LOG:  proceso ayudante «logical replication launcher» (PID 28292) termin'o con c'odigo de salida 1
+2025-05-05 16:12:20.465 -05 [32440] LOG:  apagando
+2025-05-05 16:12:20.517 -05 [27740] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 16:13:32.448 -05 [8652] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 16:13:32.458 -05 [8652] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 16:13:32.458 -05 [8652] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 16:13:32.549 -05 [28972] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 16:12:20 -05
+2025-05-05 16:13:32.606 -05 [8652] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 16:14:16.612 -05 [8652] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 16:14:16.626 -05 [8652] LOG:  abortando transacciones activas
+2025-05-05 16:14:16.633 -05 [8652] LOG:  proceso ayudante «logical replication launcher» (PID 30068) termin'o con c'odigo de salida 1
+2025-05-05 16:14:16.640 -05 [24384] LOG:  apagando
+2025-05-05 16:14:16.691 -05 [8652] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 16:15:56.329 -05 [10208] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 16:15:56.337 -05 [10208] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 16:15:56.338 -05 [10208] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 16:15:56.425 -05 [25304] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 16:14:16 -05
+2025-05-05 16:15:56.483 -05 [10208] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 16:16:17.901 -05 [10208] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 16:16:17.905 -05 [10208] LOG:  abortando transacciones activas
+2025-05-05 16:16:17.912 -05 [10208] LOG:  proceso ayudante «logical replication launcher» (PID 32268) termin'o con c'odigo de salida 1
+2025-05-05 16:16:17.921 -05 [31156] LOG:  apagando
+2025-05-05 16:16:17.976 -05 [10208] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 16:21:56.642 -05 [30956] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 16:21:56.650 -05 [30956] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 16:21:56.650 -05 [30956] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 16:21:56.737 -05 [30012] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 16:16:17 -05
+2025-05-05 16:21:56.790 -05 [30956] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 16:22:33.457 -05 [30956] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 16:22:33.461 -05 [30956] LOG:  abortando transacciones activas
+2025-05-05 16:22:33.469 -05 [30956] LOG:  proceso ayudante «logical replication launcher» (PID 30832) termin'o con c'odigo de salida 1
+2025-05-05 16:22:33.475 -05 [32192] LOG:  apagando
+2025-05-05 16:22:33.563 -05 [30956] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 16:25:17.195 -05 [27808] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 16:25:17.203 -05 [27808] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 16:25:17.204 -05 [27808] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 16:25:17.298 -05 [27696] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 16:22:33 -05
+2025-05-05 16:25:17.355 -05 [27808] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 16:26:28.535 -05 [27808] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 16:26:28.539 -05 [27808] LOG:  abortando transacciones activas
+2025-05-05 16:26:28.547 -05 [27808] LOG:  proceso ayudante «logical replication launcher» (PID 22648) termin'o con c'odigo de salida 1
+2025-05-05 16:26:28.554 -05 [29360] LOG:  apagando
+2025-05-05 16:26:28.607 -05 [27808] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 16:26:49.325 -05 [11796] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 16:26:49.334 -05 [11796] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 16:26:49.334 -05 [11796] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 16:26:49.420 -05 [28824] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 16:26:28 -05
+2025-05-05 16:26:49.475 -05 [11796] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 16:27:06.192 -05 [11796] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 16:27:06.206 -05 [11796] LOG:  abortando transacciones activas
+2025-05-05 16:27:06.214 -05 [11796] LOG:  proceso ayudante «logical replication launcher» (PID 27376) termin'o con c'odigo de salida 1
+2025-05-05 16:27:06.221 -05 [29352] LOG:  apagando
+2025-05-05 16:27:06.270 -05 [11796] LOG:  el sistema de bases de datos est'a apagado
+2025-05-05 16:27:25.800 -05 [28500] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-05 16:27:25.809 -05 [28500] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-05 16:27:25.809 -05 [28500] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-05 16:27:26.007 -05 [30912] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 16:27:06 -05
+2025-05-05 16:27:26.065 -05 [28500] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-05 16:28:08.457 -05 [28500] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-05 16:28:08.472 -05 [28500] LOG:  abortando transacciones activas
+2025-05-05 16:28:08.478 -05 [28500] LOG:  proceso ayudante «logical replication launcher» (PID 27416) termin'o con c'odigo de salida 1
+2025-05-05 16:28:08.488 -05 [32004] LOG:  apagando
+2025-05-05 16:28:08.546 -05 [28500] LOG:  el sistema de bases de datos est'a apagado
+2025-05-06 15:33:08.209 -05 [5496] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-06 15:33:08.218 -05 [5496] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-06 15:33:08.218 -05 [5496] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-06 15:33:08.312 -05 [14172] LOG:  el sistema de bases de datos fue apagado en 2025-05-05 16:28:08 -05
+2025-05-06 15:33:08.374 -05 [5496] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-06 15:34:16.607 -05 [5496] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-06 15:34:16.611 -05 [5496] LOG:  abortando transacciones activas
+2025-05-06 15:34:16.619 -05 [5496] LOG:  proceso ayudante «logical replication launcher» (PID 5484) termin'o con c'odigo de salida 1
+2025-05-06 15:34:16.627 -05 [26560] LOG:  apagando
+2025-05-06 15:34:16.680 -05 [5496] LOG:  el sistema de bases de datos est'a apagado
+2025-05-06 15:34:31.817 -05 [20368] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-06 15:34:31.825 -05 [20368] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-06 15:34:31.826 -05 [20368] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-06 15:34:31.923 -05 [30444] LOG:  el sistema de bases de datos fue apagado en 2025-05-06 15:34:16 -05
+2025-05-06 15:34:31.981 -05 [20368] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-06 15:34:43.967 -05 [20368] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-06 15:34:43.971 -05 [20368] LOG:  abortando transacciones activas
+2025-05-06 15:34:43.980 -05 [20368] LOG:  proceso ayudante «logical replication launcher» (PID 21104) termin'o con c'odigo de salida 1
+2025-05-06 15:34:43.987 -05 [29244] LOG:  apagando
+2025-05-06 15:34:44.046 -05 [20368] LOG:  el sistema de bases de datos est'a apagado
+2025-05-06 15:35:39.055 -05 [28936] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-06 15:35:39.063 -05 [28936] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-06 15:35:39.064 -05 [28936] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-06 15:35:39.153 -05 [5272] LOG:  el sistema de bases de datos fue apagado en 2025-05-06 15:34:44 -05
+2025-05-06 15:35:39.209 -05 [28936] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-06 15:35:56.464 -05 [28936] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-06 15:35:56.478 -05 [28936] LOG:  abortando transacciones activas
+2025-05-06 15:35:56.485 -05 [28936] LOG:  proceso ayudante «logical replication launcher» (PID 30100) termin'o con c'odigo de salida 1
+2025-05-06 15:35:56.492 -05 [28684] LOG:  apagando
+2025-05-06 15:35:56.548 -05 [28936] LOG:  el sistema de bases de datos est'a apagado
+2025-05-06 15:36:31.933 -05 [20324] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-06 15:36:31.943 -05 [20324] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-06 15:36:31.944 -05 [20324] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-06 15:36:32.033 -05 [24776] LOG:  el sistema de bases de datos fue apagado en 2025-05-06 15:35:56 -05
+2025-05-06 15:36:32.088 -05 [20324] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-06 15:36:56.724 -05 [20324] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-06 15:36:56.728 -05 [20324] LOG:  abortando transacciones activas
+2025-05-06 15:36:56.734 -05 [20324] LOG:  proceso ayudante «logical replication launcher» (PID 7788) termin'o con c'odigo de salida 1
+2025-05-06 15:36:56.742 -05 [29036] LOG:  apagando
+2025-05-06 15:36:56.794 -05 [20324] LOG:  el sistema de bases de datos est'a apagado
+2025-05-06 15:38:28.544 -05 [22484] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-06 15:38:28.553 -05 [22484] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-06 15:38:28.554 -05 [22484] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-06 15:38:28.643 -05 [26504] LOG:  el sistema de bases de datos fue apagado en 2025-05-06 15:36:56 -05
+2025-05-06 15:38:28.701 -05 [22484] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-06 15:41:07.153 -05 [22484] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-06 15:41:07.157 -05 [22484] LOG:  abortando transacciones activas
+2025-05-06 15:41:07.166 -05 [22484] LOG:  proceso ayudante «logical replication launcher» (PID 16892) termin'o con c'odigo de salida 1
+2025-05-06 15:41:07.173 -05 [21424] LOG:  apagando
+2025-05-06 15:41:07.231 -05 [22484] LOG:  el sistema de bases de datos est'a apagado
+2025-05-06 15:41:42.318 -05 [12072] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-06 15:41:42.327 -05 [12072] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-06 15:41:42.327 -05 [12072] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-06 15:41:42.415 -05 [30640] LOG:  el sistema de bases de datos fue apagado en 2025-05-06 15:41:07 -05
+2025-05-06 15:41:42.470 -05 [12072] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-06 16:00:38.009 -05 [12072] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-06 16:00:38.013 -05 [12072] LOG:  abortando transacciones activas
+2025-05-06 16:00:38.021 -05 [12072] LOG:  proceso ayudante «logical replication launcher» (PID 10260) termin'o con c'odigo de salida 1
+2025-05-06 16:00:38.029 -05 [1104] LOG:  apagando
+2025-05-06 16:00:38.097 -05 [12072] LOG:  el sistema de bases de datos est'a apagado
+2025-05-07 14:56:56.795 -05 [20636] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-07 14:56:56.807 -05 [20636] LOG:  no se pudo enlazar a la direcci'on IPv6 «::1»: Permission denied
+2025-05-07 14:56:56.807 -05 [20636] HINT:  ?Hay otro postmaster corriendo en el puerto 5432? Si no, aguarde unos segundos y reintente.
+2025-05-07 14:56:56.808 -05 [20636] LOG:  no se pudo enlazar a la direcci'on IPv4 «127.0.0.1»: Permission denied
+2025-05-07 14:56:56.808 -05 [20636] HINT:  ?Hay otro postmaster corriendo en el puerto 5432? Si no, aguarde unos segundos y reintente.
+2025-05-07 14:56:56.808 -05 [20636] WARNING:  no se pudo crear el socket de escucha para «localhost»
+2025-05-07 14:56:56.809 -05 [20636] FATAL:  no se pudo crear ning'un socket TCP/IP
+2025-05-07 14:56:56.810 -05 [20636] LOG:  el sistema de bases de datos est'a apagado
+2025-05-07 15:04:05.869 -05 [23720] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-07 15:04:05.879 -05 [23720] LOG:  no se pudo enlazar a la direcci'on IPv6 «::1»: Permission denied
+2025-05-07 15:04:05.879 -05 [23720] HINT:  ?Hay otro postmaster corriendo en el puerto 5432? Si no, aguarde unos segundos y reintente.
+2025-05-07 15:04:05.880 -05 [23720] LOG:  no se pudo enlazar a la direcci'on IPv4 «127.0.0.1»: Permission denied
+2025-05-07 15:04:05.880 -05 [23720] HINT:  ?Hay otro postmaster corriendo en el puerto 5432? Si no, aguarde unos segundos y reintente.
+2025-05-07 15:04:05.880 -05 [23720] WARNING:  no se pudo crear el socket de escucha para «localhost»
+2025-05-07 15:04:05.880 -05 [23720] FATAL:  no se pudo crear ning'un socket TCP/IP
+2025-05-07 15:04:05.882 -05 [23720] LOG:  el sistema de bases de datos est'a apagado
+2025-05-07 15:06:22.850 -05 [32396] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-07 15:06:22.862 -05 [32396] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-07 15:06:22.863 -05 [32396] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-07 15:06:23.002 -05 [32132] LOG:  el sistema de bases de datos fue apagado en 2025-05-06 16:00:38 -05
+2025-05-07 15:06:23.082 -05 [32396] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-07 15:06:29.372 -05 [2928] ERROR:  no existe la relación «dbms_values» en carácter 86
+2025-05-07 15:06:29.372 -05 [2928] SENTENCIA:  select distinct criteria_name, version_name, value_
+	                            from dbms_values a
+	                                join criteria b
+	                                    on a.criteria_id = b.id
+	                                join dbms_versions c
+	                                    on a.dbms_version_id = c.id
+2025-05-07 15:06:29.817 -05 [32396] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-07 15:06:29.821 -05 [32396] LOG:  abortando transacciones activas
+2025-05-07 15:06:29.830 -05 [32396] LOG:  proceso ayudante «logical replication launcher» (PID 16984) termin'o con c'odigo de salida 1
+2025-05-07 15:06:29.836 -05 [33148] LOG:  apagando
+2025-05-07 15:06:29.891 -05 [32396] LOG:  el sistema de bases de datos est'a apagado
+2025-05-07 15:14:33.781 -05 [35444] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-07 15:14:33.791 -05 [35444] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-07 15:14:33.792 -05 [35444] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-07 15:14:33.893 -05 [31304] LOG:  el sistema de bases de datos fue apagado en 2025-05-07 15:06:29 -05
+2025-05-07 15:14:33.957 -05 [35444] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-07 15:14:40.115 -05 [31552] ERROR:  no existe la relaciÃ³n Â«dbms_valuesÂ» en carÃ¡cter 86
+2025-05-07 15:14:40.115 -05 [31552] SENTENCIA:  select distinct criteria_name, version_name, value_
+	                            from dbms_values a
+	                                join criteria b
+	                                    on a.criteria_id = b.id
+	                                join dbms_versions c
+	                                    on a.dbms_version_id = c.id
+2025-05-07 15:14:40.343 -05 [35444] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-07 15:14:40.357 -05 [35444] LOG:  abortando transacciones activas
+2025-05-07 15:14:40.369 -05 [35444] LOG:  proceso ayudante «logical replication launcher» (PID 12956) termin'o con c'odigo de salida 1
+2025-05-07 15:14:40.379 -05 [26748] LOG:  apagando
+2025-05-07 15:14:40.448 -05 [35444] LOG:  el sistema de bases de datos est'a apagado
+2025-05-07 15:25:59.297 -05 [14312] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-07 15:25:59.306 -05 [14312] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-07 15:25:59.306 -05 [14312] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-07 15:25:59.410 -05 [32516] LOG:  el sistema de bases de datos fue apagado en 2025-05-07 15:14:40 -05
+2025-05-07 15:25:59.473 -05 [14312] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-07 15:26:05.802 -05 [33272] ERROR:  no existe la relaciÃ³n Â«dbms_valuesÂ» en carÃ¡cter 86
+2025-05-07 15:26:05.802 -05 [33272] SENTENCIA:  select distinct criteria_name, version_name, value_
+	                            from dbms_values a
+	                                join criteria b
+	                                    on a.criteria_id = b.id
+	                                join dbms_versions c
+	                                    on a.dbms_version_id = c.id
+2025-05-07 15:26:06.036 -05 [14312] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-07 15:26:06.051 -05 [14312] LOG:  abortando transacciones activas
+2025-05-07 15:26:06.061 -05 [14312] LOG:  proceso ayudante «logical replication launcher» (PID 23724) termin'o con c'odigo de salida 1
+2025-05-07 15:26:06.071 -05 [19252] LOG:  apagando
+2025-05-07 15:26:06.138 -05 [14312] LOG:  el sistema de bases de datos est'a apagado
+2025-05-07 15:26:33.309 -05 [31696] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-07 15:26:33.319 -05 [31696] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-07 15:26:33.320 -05 [31696] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-07 15:26:33.429 -05 [20504] LOG:  el sistema de bases de datos fue apagado en 2025-05-07 15:26:06 -05
+2025-05-07 15:26:33.501 -05 [31696] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-07 15:26:38.954 -05 [26892] ERROR:  no existe la tabla Â«criteriaÂ»
+2025-05-07 15:26:38.954 -05 [26892] SENTENCIA:  DROP TABLE public.criteria CASCADE;
+2025-05-07 15:26:39.063 -05 [26892] ERROR:  no existe la funciÃ³n public.set_default_value()
+2025-05-07 15:26:39.063 -05 [26892] SENTENCIA:  DROP FUNCTION public.set_default_value() CASCADE;
+2025-05-07 15:26:39.072 -05 [26892] ERROR:  no existe la relaciÃ³n Â«criteria_valuesÂ»
+2025-05-07 15:26:39.072 -05 [26892] SENTENCIA:  TRUNCATE TABLE
+	  criteria_values,
+	  criteria_allowed_values,
+	  criteria,
+	  criteria_types,
+	  data_types,
+	  dbms,
+	  dbms_versions,
+	  results,
+	  task_info,
+	  tasks CASCADE;
+2025-05-07 15:26:54.166 -05 [31696] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-07 15:26:54.173 -05 [31696] LOG:  abortando transacciones activas
+2025-05-07 15:26:54.184 -05 [31696] LOG:  proceso ayudante «logical replication launcher» (PID 34664) termin'o con c'odigo de salida 1
+2025-05-07 15:26:54.190 -05 [7892] LOG:  apagando
+2025-05-07 15:26:54.412 -05 [31696] LOG:  el sistema de bases de datos est'a apagado
+2025-05-07 15:28:04.890 -05 [31324] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-07 15:28:04.903 -05 [31324] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-07 15:28:04.903 -05 [31324] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-07 15:28:05.026 -05 [28752] LOG:  el sistema de bases de datos fue apagado en 2025-05-07 15:26:54 -05
+2025-05-07 15:28:05.102 -05 [31324] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-07 15:28:10.238 -05 [25916] ERROR:  no existe la funciÃ³n public.set_default_value()
+2025-05-07 15:28:10.238 -05 [25916] SENTENCIA:  DROP FUNCTION public.set_default_value() CASCADE;
+2025-05-07 15:28:24.989 -05 [31324] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-07 15:28:24.993 -05 [31324] LOG:  abortando transacciones activas
+2025-05-07 15:28:25.004 -05 [31324] LOG:  proceso ayudante «logical replication launcher» (PID 17424) termin'o con c'odigo de salida 1
+2025-05-07 15:28:25.011 -05 [6084] LOG:  apagando
+2025-05-07 15:28:25.292 -05 [31324] LOG:  el sistema de bases de datos est'a apagado
+2025-05-07 15:29:14.270 -05 [24324] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-07 15:29:14.280 -05 [24324] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-07 15:29:14.281 -05 [24324] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-07 15:29:14.402 -05 [20636] LOG:  el sistema de bases de datos fue apagado en 2025-05-07 15:28:25 -05
+2025-05-07 15:29:14.467 -05 [24324] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-07 15:30:04.960 -05 [24324] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-07 15:30:04.970 -05 [24324] LOG:  abortando transacciones activas
+2025-05-07 15:30:04.982 -05 [24324] LOG:  proceso ayudante «logical replication launcher» (PID 29768) termin'o con c'odigo de salida 1
+2025-05-07 15:30:04.991 -05 [25132] LOG:  apagando
+2025-05-07 15:30:05.422 -05 [24324] LOG:  el sistema de bases de datos est'a apagado
+2025-05-07 16:28:26.250 -05 [29724] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-07 16:28:26.260 -05 [29724] LOG:  no se pudo enlazar a la direcci'on IPv6 «::1»: Permission denied
+2025-05-07 16:28:26.260 -05 [29724] HINT:  ?Hay otro postmaster corriendo en el puerto 5432? Si no, aguarde unos segundos y reintente.
+2025-05-07 16:28:26.261 -05 [29724] LOG:  no se pudo enlazar a la direcci'on IPv4 «127.0.0.1»: Permission denied
+2025-05-07 16:28:26.261 -05 [29724] HINT:  ?Hay otro postmaster corriendo en el puerto 5432? Si no, aguarde unos segundos y reintente.
+2025-05-07 16:28:26.261 -05 [29724] WARNING:  no se pudo crear el socket de escucha para «localhost»
+2025-05-07 16:28:26.261 -05 [29724] FATAL:  no se pudo crear ning'un socket TCP/IP
+2025-05-07 16:28:26.263 -05 [29724] LOG:  el sistema de bases de datos est'a apagado
+2025-05-07 16:28:41.615 -05 [27628] LOG:  iniciando PostgreSQL 12.4, compiled by Visual C++ build 1914, 64-bit
+2025-05-07 16:28:41.623 -05 [27628] LOG:  escuchando en la direcci'on IPv6 «::1», port 5433
+2025-05-07 16:28:41.624 -05 [27628] LOG:  escuchando en la direcci'on IPv4 «127.0.0.1», port 5433
+2025-05-07 16:28:41.712 -05 [21888] LOG:  el sistema de bases de datos fue apagado en 2025-05-07 15:30:05 -05
+2025-05-07 16:28:41.767 -05 [27628] LOG:  el sistema de bases de datos est'a listo para aceptar conexiones
+2025-05-07 16:28:54.754 -05 [27628] LOG:  se recibi'o petici'on de apagado r'apido
+2025-05-07 16:28:54.758 -05 [27628] LOG:  abortando transacciones activas
+2025-05-07 16:28:54.765 -05 [27628] LOG:  proceso ayudante «logical replication launcher» (PID 10576) termin'o con c'odigo de salida 1
+2025-05-07 16:28:54.771 -05 [33060] LOG:  apagando
+2025-05-07 16:28:54.827 -05 [27628] LOG:  el sistema de bases de datos est'a apagado

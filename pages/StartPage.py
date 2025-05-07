@@ -1,5 +1,5 @@
 import tkinter as tk
-from info.vars import *
+from data.vars import *
 from pages.ChooseMethod import ChooseMethod
 from pages.OldResults import OldResults
 
@@ -12,17 +12,17 @@ class StartPage(tk.Frame):
         tk.Frame.__init__(self, parent,  bg = MAINCOLOR)
 
         tk.Label(self, text ="СППР для выбора СУБД", font = LARGEFONT, bg =MAINCOLOR, fg = FONTCOLOR
-                 ).grid(row = 1, column = 1, padx = 10, pady = 10)
+                 ).grid(row = 1, column = 0, columnspan=3)
 
-        main_menu = ['Выбрать СУБД', 'Поcмотреть старые результаты']
+        main_menu = ['Выбрать СУБД', 'Поcмотреть предыдущие результаты']
 
         tk.Button(self, text=main_menu[0], font=LARGEFONT, bg=BUTTONCOLOR, fg=FONTCOLOR,
                   activeforeground=BUTTONCOLOR, command=lambda: controller.show_frame(ChooseMethod)
-                  ).grid(row=3, column=1, stick='snwe')
+                  ).grid(row=3, column=0, columnspan=3)
 
         tk.Button(self, text=main_menu[1], font=LARGEFONT, bg=BUTTONCOLOR, fg=FONTCOLOR,
                   activeforeground=BUTTONCOLOR, command=lambda: controller.show_frame(OldResults)
-                  ).grid(row=4, column=1, stick='snwe')
+                  ).grid(row=4, column=0, columnspan=3)
 
         for i in range(3):
             self.grid_columnconfigure(i, minsize=350)

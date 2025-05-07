@@ -1,7 +1,7 @@
 import psycopg2
 import tkinter as tk
 import re
-from info.vars import *
+from data.vars import *
 import pandas as pd
 from tkinter import messagebox
 from dotenv import load_dotenv
@@ -18,7 +18,6 @@ connection = psycopg2.connect(
     user=os.getenv("DB_USER"),
     password=""
 )
-# connection.set_client_encoding('WIN1252')
 cursor = connection.cursor()
 
 class SelectCriteria(tk.Toplevel):

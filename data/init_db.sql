@@ -8,7 +8,6 @@
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
---SET client_encoding = 'WIN1252';
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
@@ -37,7 +36,6 @@ SET default_table_access_method = heap;
 --
 -- Name: criteria; Type: TABLE; Schema: public; Owner: postgres
 --
-DROP TABLE public.criteria CASCADE;
 CREATE TABLE public.criteria (
     id numeric(5,0) NOT NULL,
     criteria_name character varying(200) NOT NULL,
@@ -167,18 +165,6 @@ CREATE TABLE public.dbms_versions (
 ALTER TABLE public.dbms_versions OWNER TO postgres;
 
 --
--- Name: multiple_choice; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.multiple_choice (
-    value_id numeric(5,0),
-    task_value character varying(40)
-);
-
-
-ALTER TABLE public.multiple_choice OWNER TO postgres;
-
---
 -- Name: results; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -292,10 +278,26 @@ ALTER TABLE public.tasks_seq OWNER TO postgres;
 
 ALTER SEQUENCE public.tasks_seq OWNED BY public.tasks.id;
 
+
+
+--
+-- Name: dbms_values; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.dbms_values (
+    id numeric(5,0) NOT NULL,
+    criteria_id numeric(5,0),
+    dbms_version_id numeric(5,0),
+    value_ numeric(2,0) NOT NULL,
+    comment character varying(120)
+);
+
+
+ALTER TABLE public.dbms_values OWNER TO postgres;
+
 --
 -- Name: check_allowed_value_update(); Type: FUNCTION; Schema: public; Owner: postgres
 --
-DROP FUNCTION public.check_allowed_value_update() CASCADE;
 
 CREATE FUNCTION public.check_allowed_value_update() RETURNS trigger
     LANGUAGE plpgsql
@@ -324,7 +326,7 @@ ALTER FUNCTION public.check_allowed_value_update() OWNER TO postgres;
 --
 -- Name: set_default_value(); Type: FUNCTION; Schema: public; Owner: postgres
 --
-DROP FUNCTION public.set_default_value() CASCADE;
+
 CREATE FUNCTION public.set_default_value() RETURNS trigger
     LANGUAGE plpgsql
     AS $$
@@ -386,17 +388,6 @@ ALTER TABLE ONLY public.tasks ALTER COLUMN id SET DEFAULT nextval('public.tasks_
 --
 -- Data for Name: criteria; Type: TABLE DATA; Schema: public; Owner: postgres
 --
-TRUNCATE TABLE
-  criteria_values,
-  criteria_allowed_values,
-  criteria,
-  criteria_types,
-  data_types,
-  dbms,
-  dbms_versions,
-  results,
-  task_info,
-  tasks CASCADE;
 
 COPY public.criteria (id, criteria_name, criteria_types_name, data_types_name, adding_date, termination_date, minimum_value, maximum_value, comment, unit) FROM stdin;
 3	К1.2. Триггеры и хранимые процедуры	бинарный	varchar	2025-01-07	\N	\N	\N	\N	\N
@@ -791,73 +782,96 @@ COPY public.dbms_versions (id, version_name, dbms_id, version_release_date, vers
 
 
 --
--- Data for Name: multiple_choice; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: dbms_values; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.multiple_choice (value_id, task_value) FROM stdin;
+COPY public.dbms_values (id, criteria_id, dbms_version_id, value_, comment) FROM stdin;
+1	2	1	10	\N
+2	2	4	9	\N
+3	2	15	8	\N
+4	2	19	9	\N
+5	3	1	10	\N
+6	3	4	9	\N
+7	3	15	8	\N
+8	3	19	10	\N
+9	4	1	10	\N
+10	4	4	9	\N
+11	4	15	8	\N
+12	4	19	9	\N
+13	6	1	9	\N
+14	6	4	8	\N
+15	6	15	7	\N
+16	6	19	9	\N
+17	7	1	9	\N
+18	7	4	8	\N
+19	7	15	6	\N
+20	7	19	8	\N
+21	9	1	9	\N
+22	9	4	8	\N
+23	9	15	7	\N
+24	9	19	9	\N
+25	10	1	10	\N
+26	10	4	8	\N
+27	10	15	7	\N
+28	10	19	9	\N
+29	12	1	10	\N
+30	12	4	7	\N
+31	12	15	6	\N
+32	12	19	10	\N
+33	13	1	9	\N
+34	13	4	7	\N
+35	13	15	6	\N
+36	13	19	9	\N
+37	14	1	10	\N
+38	14	4	9	\N
+39	14	15	7	\N
+40	14	19	9	\N
+41	15	1	10	\N
+42	15	4	9	\N
+43	15	15	8	\N
+44	15	19	9	\N
+45	19	1	10	\N
+46	19	4	8	\N
+47	19	15	7	\N
+48	19	19	9	\N
+49	20	1	10	\N
+50	20	4	8	\N
+51	20	15	7	\N
+52	20	19	9	\N
+53	21	1	10	\N
+54	21	4	8	\N
+55	21	15	7	\N
+56	21	19	9	\N
+57	22	1	10	\N
+58	22	4	9	\N
+59	22	15	8	\N
+60	22	19	10	\N
+61	24	1	10	\N
+62	24	4	8	\N
+63	24	15	7	\N
+64	24	19	9	\N
+65	25	1	8	\N
+66	25	4	7	\N
+67	25	15	6	\N
+68	25	19	8	\N
+69	26	1	10	\N
+70	26	4	8	\N
+71	26	15	7	\N
+72	26	19	9	\N
+73	27	1	10	\N
+74	27	4	9	\N
+75	27	15	8	\N
+76	27	19	9	\N
+77	29	1	2	\N
+78	29	4	10	\N
+79	29	15	10	\N
+80	29	19	5	\N
+81	30	1	10	\N
+82	30	4	8	\N
+83	30	15	7	\N
+84	30	19	9	\N
 \.
 
-
---
--- Data for Name: results; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.results (result_id, tasks_id, dbms_version_id, calculation_date, dbms_rank, dbms_weight, comment) FROM stdin;
-1	1	1	2025-04-18	1	0.352	\N
-2	1	4	2025-04-18	2	0.140	\N
-3	3	1	2025-04-19	1	0.352	\N
-4	3	4	2025-04-19	2	0.140	\N
-5	5	1	2025-04-19	1	0.393	\N
-6	5	4	2025-04-19	2	0.156	\N
-7	6	1	2025-04-19	1	0.249	\N
-8	6	4	2025-04-19	2	0.088	\N
-9	8	1	2025-04-19	1	1.000	\N
-10	8	4	2025-04-19	2	0.000	\N
-11	10	1	2025-04-19	1	1.000	\N
-12	10	4	2025-04-19	2	0.000	\N
-13	27	1	2025-04-19	1	0.263	\N
-14	27	4	2025-04-19	2	0.102	\N
-15	29	1	2025-04-19	1	1.000	\N
-16	29	4	2025-04-19	2	0.000	\N
-17	44	1	2025-04-19	1	0.352	\N
-18	44	4	2025-04-19	2	0.140	\N
-19	47	1	2025-04-19	1	0.263	\N
-20	47	4	2025-04-19	2	0.102	\N
-21	49	1	2025-04-19	1	0.262	\N
-22	49	4	2025-04-19	2	0.101	\N
-23	53	1	2025-04-20	1	1.000	\N
-24	53	4	2025-04-20	2	0.000	\N
-25	54	1	2025-04-20	1	1.000	\N
-26	54	4	2025-04-20	2	0.000	\N
-27	56	1	2025-04-20	1	0.263	\N
-28	56	4	2025-04-20	2	0.102	\N
-29	57	1	2025-04-20	1	1.000	\N
-30	57	4	2025-04-20	2	0.000	\N
-31	58	1	2025-04-20	1	1.000	\N
-32	58	4	2025-04-20	2	0.000	\N
-33	59	1	2025-04-20	1	0.175	\N
-34	59	4	2025-04-20	2	0.069	\N
-35	61	1	2025-04-20	1	0.175	\N
-36	61	4	2025-04-20	2	0.069	\N
-37	64	1	2025-04-20	1	0.263	\N
-38	64	4	2025-04-20	2	0.102	\N
-39	65	1	2025-04-22	1	0.212	\N
-40	66	1	2025-04-25	1	0.224	\N
-41	66	4	2025-04-25	2	0.064	\N
-42	68	1	2025-04-25	1	0.236	\N
-43	68	4	2025-04-25	2	0.076	\N
-44	69	1	2025-04-26	1	0.175	\N
-45	69	4	2025-04-26	2	0.069	\N
-46	77	1	2025-04-26	1	0.261	\N
-47	77	4	2025-04-26	2	0.101	\N
-48	87	1	2025-04-26	1	0.175	\N
-49	87	4	2025-04-26	2	0.069	\N
-50	95	1	2025-04-26	1	0.352	\N
-51	95	4	2025-04-26	2	0.140	\N
-52	96	1	2025-04-26	1	0.396	\N
-53	96	4	2025-04-26	2	0.157	\N
-54	97	4	2025-04-26	1	0.047	\N
-\.
 
 --
 -- Name: code_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
@@ -984,6 +998,13 @@ ALTER TABLE ONLY public.tasks
 
 
 --
+-- Name: dbms_values dbms_values_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.dbms_values
+    ADD CONSTRAINT dbms_values_pkey PRIMARY KEY (id);
+
+--
 -- Name: criteria_allowed_values check_allowed_value; Type: TRIGGER; Schema: public; Owner: postgres
 --
 
@@ -1076,7 +1097,24 @@ ALTER TABLE ONLY public.task_info
 ALTER TABLE ONLY public.task_info
     ADD CONSTRAINT task_info_tasks_id_fkey FOREIGN KEY (tasks_id) REFERENCES public.tasks(id);
 
+
+--
+-- Name: dbms_values dbms_values_criteria_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.dbms_values
+    ADD CONSTRAINT dbms_values_criteria_id_fkey FOREIGN KEY (criteria_id) REFERENCES public.criteria(id);
+
+
+--
+-- Name: dbms_values dbms_values_dbms_version_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.dbms_values
+    ADD CONSTRAINT dbms_values_dbms_version_id_fkey FOREIGN KEY (dbms_version_id) REFERENCES public.dbms_versions(id);
+
 --
 -- PostgreSQL database dump complete
 --
+
 

@@ -1,5 +1,5 @@
 import numpy as np
-from info.expert_values import expert_values
+from data.dbms_values import dbms_values
 
 def entropy_weights(decision_matrix):
     """
@@ -30,7 +30,7 @@ def topsis(criteria, names):
     weights: веса критериев (длина n)
     benefit_criteria: список булевых значений, True — критерий на максимум, False — на минимум
     """
-    data = expert_values[expert_values.index.isin(names)][list(criteria.keys())]
+    data = dbms_values[dbms_values.index.isin(names)][list(criteria.keys())]
     # Веса критериев (считаем методом энтропии)
     weights = entropy_weights(np.array(data))
 

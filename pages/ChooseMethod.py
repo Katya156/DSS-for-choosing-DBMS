@@ -1,6 +1,6 @@
 import psycopg2
 import tkinter as tk
-from info.vars import *
+from data.vars import *
 from pages.ChooseCriteria import ChooseCriteria
 from dotenv import load_dotenv
 from tkinter import messagebox

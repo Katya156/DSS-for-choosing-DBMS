@@ -2,7 +2,7 @@ import itertools
 import re
 from pages.Tooltip import CreateToolTip
 import tkinter as tk
-from info.vars import *
+from data.vars import *
 
 
 def return_result(entries, s):

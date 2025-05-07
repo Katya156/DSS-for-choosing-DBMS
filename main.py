@@ -14,7 +14,6 @@ connection = psycopg2.connect(
     user=os.getenv("DB_USER"),
     password=''
 )
-# connection.set_client_encoding('WIN1252')
 cursor = connection.cursor()
 
 # Driver Code

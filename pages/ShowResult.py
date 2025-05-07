@@ -1,11 +1,15 @@
 import psycopg2
+import pandas as pd
+from tkinter import filedialog, messagebox
+from openpyxl import load_workbook
 import tkinter as tk
-from info.vars import *
+from data.vars import *
 from methods.AHP import ahp
 from methods.TOPSIS import topsis
 from dotenv import load_dotenv
 import os
 from collections import defaultdict
+from itertools import zip_longest
 
 # Загружаем данные из .env файла
 load_dotenv()
@@ -125,16 +129,55 @@ class ShowResult(tk.Frame):
                          ).grid(row=start, column=0, sticky='n', columnspan=2)
                 start += 1
 
-            start = 2
+            start_2 = 2
             cnt = 1
             for i in res:
                 tk.Label(self, text=f'{cnt}. {i}, вес - {round(res[i], 3)}', font=MIDFONT, fg=FONTCOLOR,
                          bg=MAINCOLOR
-                         ).grid(row=start, column=2, sticky='n', columnspan=2)
-                if start >= threshold:
+                         ).grid(row=start_2, column=2, sticky='n', columnspan=2)
+                if start_2 >= threshold:
                     break
-                start += 1
+                start_2 += 1
                 cnt += 1
+
+            def download_results():
+                try:
+                    res_res = {'СУБД': list(res.keys()), 'Ранг': list(res.values())}
+                    df_res = pd.DataFrame(res_res)
+                    print(df_res)
+                    data = list(zip_longest(*grouped_data.values(), fillvalue=None))
+                    df_criteria = pd.DataFrame(data, columns=list(grouped_data.keys()))
+                    print(df_criteria)
+                    # Диалог выбора файла
+                    file_path = filedialog.asksaveasfilename(
+                        defaultextension=".xlsx",
+                        filetypes=[("Excel файлы", "*.xlsx")],
+                        title="Сохранить как..."
+                    )
+
+                    if file_path:
+                        with pd.ExcelWriter(file_path) as writer:
+                            df_res.to_excel(writer, sheet_name=f"DBMS Weights", index=False)
+                            df_criteria.to_excel(writer, sheet_name="Criteria", index=False)
+
+                        wb = load_workbook(file_path)
+                        ws = wb["DBMS Weights"]  # Название нужного листа
+                        # Вставим строку в начало (перед заголовками)
+                        ws.insert_rows(1)
+                        ws["A1"] = f"Метод ранжирования - {method}"
+                        wb.save(file_path)
+
+                        messagebox.showinfo("Успешно", f"Файл сохранён в:\n{file_path}")
+                    else:
+                        messagebox.showinfo("Отмена", "Сохранение отменено.")
+                except Exception as e:
+                    messagebox.showerror("Ошибка", f"Не удалось скачать данные:\n{str(e)}")
+
+            download_btn = tk.Button(self, text="Скачать результаты", font=MIDFONT, fg=FONTCOLOR,
+                                     bg=BUTTONCOLOR, activeforeground=BUTTONCOLOR,
+                                     command=download_results)
+            row = max(start, start_2)
+            download_btn.grid(row=row + 1, column=1, sticky='n', columnspan=2)
 
 
             def end_program():
@@ -148,7 +191,7 @@ class ShowResult(tk.Frame):
 
             tk.Button(self, text='Завершить', font=MIDFONT, bg=BUTTONCOLOR, fg=FONTCOLOR,
                       activeforeground=BUTTONCOLOR, command=end_program
-                      ).grid(row=13, column=0, sticky='n', columnspan=4)
+                      ).grid(row=row + 3, column=0, sticky='n', columnspan=4)
         else:
             tk.Label(self, text='Подходящих СУБД не найдено', font=LARGEFONT, fg=FONTCOLOR,
                      bg=MAINCOLOR

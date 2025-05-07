@@ -1,5 +1,5 @@
 import ahpy
-from info.comparisons import pairwise_dict
+from data.comparisons import pairwise_dict
 
 def ahp(criteria_in, criteria_out, names):
     # подсчет весов внутренних и внешних критериев

@@ -1,5 +1,5 @@
 import tkinter as tk
-from info.vars import *
+from data.vars import *
 from pages.SelectCriteria import SelectCriteria
 from pages.FillCriteriaOut import FillCriteriaOut
 from pages.ShowResult import ShowResult
