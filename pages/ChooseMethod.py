@@ -39,7 +39,7 @@ class ChooseMethod(tk.Frame):
                     messagebox.showerror("Ошибка", "Такое название задачи уже существует")
                 bt.config(state='disabled')  # Деактивируем кнопку
 
-        def insert_task_name(entry, selected_var, scale):
+        def insert_tasks(entry, selected_var, scale):
             # тут записываю название задачи в бд
             cursor.execute(f"""insert into tasks(task_name, threshold_task, selected_method, filling_date) values(
                                           '{entry.get()}', {scale.get()}, '{selected_var.get()}', current_date)""")
@@ -77,7 +77,7 @@ class ChooseMethod(tk.Frame):
 
         bt = tk.Button(self, text='Подтвердить', font=MIDFONT, bg=BUTTONCOLOR, fg=FONTCOLOR, activeforeground=BUTTONCOLOR,
                   state='disabled', command=lambda: controller.show_frame(ChooseCriteria,
-                                                                          task_id = insert_task_name(entry, selected_var, scale),
+                                                                          task_id = insert_tasks(entry, selected_var, scale),
                                                                           method = selected_var.get()))
         bt.grid(row=12, column=1, stick='n')
 

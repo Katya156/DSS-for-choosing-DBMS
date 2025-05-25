@@ -36,7 +36,7 @@ class ChooseCriteria(tk.Frame):
         self.method = method
 
         print("Выбранный метод:", self.method)  # Для проверки
-        print('Название задачи:', self.task_id)
+        print('ID задачи:', self.task_id)
 
         def check_entries(criteria_dict, key):
             # Проверяем, заполнены ли все поля Entry

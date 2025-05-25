@@ -1,5 +1,6 @@
 import numpy as np
 from data.dbms_values import dbms_values
+from topsispy import topsis as tps
 
 def entropy_weights(decision_matrix):
     """
@@ -26,7 +27,7 @@ def entropy_weights(decision_matrix):
 def topsis(criteria, names):
     """
     Метод TOPSIS.
-    decision_matrix: numpy array формы (m, n)
+    data: numpy array формы (m, n)
     weights: веса критериев (длина n)
     benefit_criteria: список булевых значений, True — критерий на максимум, False — на минимум
     """
@@ -34,36 +35,16 @@ def topsis(criteria, names):
     # Веса критериев (считаем методом энтропии)
     weights = entropy_weights(np.array(data))
 
-    # Логика критериев: True — критерий на максимум, False — на минимум
-    # Например: [цена (min), производительность (max), энергопотребление (min)]
+    # Логика критериев: 1 — критерий на максимум, -1 — на минимум
     benefit_criteria = []
     for i in data.columns:
         if i not in ['К7.3. Максимальный размер адресуемой памяти', 'К8.1. Максимальная стоимость лицензии', 'К8.2. Рейтинг СУБД']:
-            benefit_criteria.append(True)
+            benefit_criteria.append(1)
         else:
-            benefit_criteria.append(False)
+            benefit_criteria.append(-1)
 
-    # Шаг 1: Нормализация
-    norm_matrix = data / np.sqrt((data ** 2).sum(axis=0))
-
-    # Шаг 2: Умножение на веса
-    weighted_matrix = norm_matrix * weights
-
-    # Шаг 3: Определение идеальных и антиидеальных точек
-    ideal = np.max(weighted_matrix, axis=0) * benefit_criteria + \
-            np.min(weighted_matrix, axis=0) * (~np.array(benefit_criteria))
-
-    anti_ideal = np.min(weighted_matrix, axis=0) * benefit_criteria + \
-                 np.max(weighted_matrix, axis=0) * (~np.array(benefit_criteria))
-
-    # Шаг 4: Расчет расстояний до идеальной и антиидеальной точек
-    d_pos = np.linalg.norm(weighted_matrix - ideal, axis=1)
-    d_neg = np.linalg.norm(weighted_matrix - anti_ideal, axis=1)
-
-    # Шаг 5: Расчет близости к идеалу
-    scores = d_neg / (d_pos + d_neg)
-
-    # Критерии: 1 — прибыльный (чем выше — лучше), 0 — затратный (чем меньше — лучше)
+    # Применение метода TOPSIS
+    best_rank, scores = tps(data.values, weights, benefit_criteria)
 
     # Преобразуем веса критериев в словарь, где ключи — это имена критериев, а значения — их веса
     weights_dict = {data.columns[i]: weights[i] for i in range(len(data.columns))}

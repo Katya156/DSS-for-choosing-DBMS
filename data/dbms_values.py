@@ -2,7 +2,6 @@ import pandas as pd
 import psycopg2
 from dotenv import load_dotenv
 import os
-from collections import defaultdict
 
 # Загружаем данные из .env файла
 load_dotenv()
@@ -38,6 +37,3 @@ for i in rows:
 
 dbms_values = pd.DataFrame(dbms_values)
 dbms_values = dbms_values.pivot(index="alternatives", columns="criteria", values="values")
-
-
-dbms_values.to_excel('res.xlsx')

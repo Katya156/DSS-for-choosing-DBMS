@@ -44,9 +44,7 @@ def restore_data():
             connection = psycopg2.connect(
                 host=os.getenv("DB_HOST"),
                 port=os.getenv("DB_PORT"),
-                dbname=
-                # 'postgres',
-                os.getenv("DB_NAME"),
+                dbname='postgres',
                 user=os.getenv("DB_USER"),
                 password=os.getenv("DB_PASS")
             )
@@ -57,7 +55,7 @@ def restore_data():
         connection.autocommit = True
         cur = connection.cursor()
 
-        # # Проверяем, есть ли база с именем apitone
+        # Проверяем, есть ли база с именем apitone
         cur.execute("SELECT 1 FROM pg_database WHERE datname = 'apitone';")
         exists = cur.fetchone()
 
@@ -69,7 +67,6 @@ def restore_data():
         #
         # # Удаляем базу, если она существует
         # cur.execute("DROP DATABASE IF EXISTS apitone;")
-
         if not exists:
             print("Создаём базу apitone и восстанавливаем данные...")
 

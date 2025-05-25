@@ -147,7 +147,7 @@ class OldResults(tk.Frame):
                       activeforeground=BUTTONCOLOR, command=get_result).grid(row=2, column=1, columnspan=2, sticky='n')
 
         else:
-            tk.Label(self, text='Старых задач не найдено', font=LARGEFONT, fg=FONTCOLOR, bg=MAINCOLOR
+            tk.Label(self, text='Задачи не найдены', font=LARGEFONT, fg=FONTCOLOR, bg=MAINCOLOR
                      ).grid(row=7, column=1, columnspan=2)
 
             tk.Button(self, text='Завершить', font=MIDFONT, bg=BUTTONCOLOR, fg=FONTCOLOR,

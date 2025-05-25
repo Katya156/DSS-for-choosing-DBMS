@@ -2,6 +2,7 @@ import tkinter as tk
 from data.vars import *
 from pages.ChooseMethod import ChooseMethod
 from pages.OldResults import OldResults
+from tkinter import font
 
 class StartPage(tk.Frame):
     """
@@ -11,7 +12,8 @@ class StartPage(tk.Frame):
 
         tk.Frame.__init__(self, parent,  bg = MAINCOLOR)
 
-        tk.Label(self, text ="СППР для выбора СУБД", font = LARGEFONT, bg =MAINCOLOR, fg = FONTCOLOR
+        tk.Label(self, text ="СППР для выбора СУБД", font = font.Font(family=LARGEFONT[0], size=LARGEFONT[1], weight="bold"),
+                 bg =MAINCOLOR, fg = FONTCOLOR
                  ).grid(row = 1, column = 0, columnspan=3)
 
         main_menu = ['Выбрать СУБД', 'Поcмотреть предыдущие результаты']

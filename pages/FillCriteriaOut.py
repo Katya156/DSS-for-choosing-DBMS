@@ -21,7 +21,7 @@ class FillCriteriaOut(tk.Frame):
                             activeforeground=BUTTONCOLOR, state='disabled',
                             command=lambda: self.controller.show_frame(FillCriteriaIn, self.method, self.criteria,
                                                                        return_result(entries, s), None, self.task_id))
-        button2.grid(row=cnt + 3, column=1, columnspan=2)
+        button2.grid(row=cnt + 3, column=0, columnspan=cnt+2, stick='n')
 
         entries = fill_criteria(self, button2, cnt, s, 'первого')
 
