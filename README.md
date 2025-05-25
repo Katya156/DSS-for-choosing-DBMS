@@ -8,6 +8,7 @@ If you are a developer, you can execute program by downloading code in this repo
 
 1. Clone this repository into your computer or download zip-archive
 2. Open the project in PyCharm or another development environment
+3. Run launcher.py which will start initialization of PostgreSQL Portable and the execution of the program.
 
 If you want to add your multi-criteria decision-making method, add file with function which returns a dictionary, where keys are alternatives and values are their ratings. Then modify file ShowResult.py.
 <h3>For users</h3>
